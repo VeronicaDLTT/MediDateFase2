@@ -1,0 +1,145 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuGuiaUsuario" />
+
+        <div class="col-md-9">
+            <div class="card-header border-bottom border-primary pb-2 mb-4">
+                <h4 class="card-title text-center fw-normal">Agregar Horario de Atención</h4>
+            </div>
+
+            <div class="card-body">
+                <p class="card-text">
+                    Cuando inicias sesión por primera vez en MediDate se le solicita agregar el Horario de Atención,
+                    es importante que se agregue para tener acceso a las funcionalidades de la plataforma.
+                    A continuación, se describen los pasos para agregar el Horario de Atención.
+                </p>
+
+                <br />
+
+                <div class="row justify-content-center">
+                    <div class="col-md-auto">
+                        <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/AgregarHorario/uno.png" width="800px" />
+                    </div>
+                </div>
+
+                <br /> <br />
+
+                <h5 class="card-title">Paso 1. Ingresar Hora de Apertura y Hora de Cierre</h5>
+
+                <p class="card-text">
+                    Ingresar la Hora de Apertura y la Hora de Cierre, para ello puedes escribir la Hora directamente en el 
+                    campo, por ejemplo: <b>08:00 p.m.</b> o presionar en el icono del reloj y seleccionar la hora.
+                </p>
+
+                <br />
+
+                <div class="row justify-content-center">
+                    <div class="col-md-auto">
+                        <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/AgregarHorario/dos.png" width="800px" />
+                    </div>
+                </div>
+
+                <br /> <br />
+
+                <h5 class="card-title">Paso 2. Ingresar los Días</h5>
+
+                <p class="card-text">
+                    Después, selecciona los Días a los que pertenece la Hora de Apertura y Cierre que ingresaste en el paso anterior.
+                </p>
+
+                <br />
+
+                <div class="row justify-content-center">
+                    <div class="col-md-auto">
+                        <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/AgregarHorario/tres.png" width="800px" />
+                    </div>
+                </div>
+
+                <br /> <br />
+
+                <h5 class="card-title">Paso 3. Guardar Información</h5>
+
+                <p class="card-text">
+                    Si no desea agregar más horarios de atención, presione el botón 
+                    <button type="button" class="btn btn-primary">Guardar</button>, para que el Horario de Ateción
+                    quede registrado y tenga acceso a las demás funcionalidades de la plataforma.
+                    Sabrá que el Horario se agregegó correctamente cuando apareza un mensaje de éxito.
+                </p>
+
+                <br />
+
+                <div class="row justify-content-center">
+                    <div class="col-md-auto">
+                        <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/AgregarHorario/seis.png" width="800px" />
+                    </div>
+                </div>
+
+                <br /> <br />
+
+                <h5 class="card-title">Más Horarios de Atención</h5>
+
+                <p class="card-text">
+                    Para contemplar más Horarios de Atención en un mismo día presiona
+                    el botón <button type="button" class="btn btn-success" >Agregar Horario</button>, esto agregara
+                    otro formulario con los mismos datos, después repite el Paso 1 y Paso 2.
+                </p>
+
+                <br />
+
+                <div class="row justify-content-center">
+                    <div class="col-md-auto">
+                        <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/AgregarHorario/cutro.png" width="800px" />
+                    </div>
+                </div>
+
+                <br /> <br />
+
+                <h5 class="card-title">Días Cerrados</h5>
+
+                <p class="card-text">
+                    La opción de "Días Cerrados" está diseñada para marcar aquellos días en los que el 
+                    Consultorio siempre estará cerrado. Para configurarla, seleccione la opción "Cerrado" 
+                    ubicada debajo de los campos de "Hora de Apertura" y "Hora de Cierre". Luego, elija 
+                    los días específicos que estarán cerrados de manera recurrente.
+                </p>
+
+                <br />
+
+                <div class="row justify-content-center">
+                    <div class="col-md-auto">
+                        <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/AgregarHorario/cinco.png" width="800px" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

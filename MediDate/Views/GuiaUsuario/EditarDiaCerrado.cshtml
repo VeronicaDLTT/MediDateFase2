@@ -1,0 +1,164 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuGuiaUsuario" />
+
+<div class="col-md-9 lh-lg">
+    <div class="card-header border-bottom border-primary pb-2 mb-4">
+        <h4 class="card-title text-center fw-normal">Editar Día Cerrado</h4>
+    </div>
+
+    <div class="card-body">
+
+        <p class="card-text">
+            La edición permite modificar un registro existente para corregir errores
+            o para ajustar fechas de un Día Cerrado.
+        </p>
+
+        <!-- Paso 1 -->
+        <h5 class="card-title">Paso 1: Acceder a la Sección de Horario</h5>
+
+        <ul>
+            <li>
+                Inicia sesión en el sistema con tu Usuario y Contraseña.
+            </li>
+            <li>
+                Dirígete al menú principal y selecciona la opción Horario.
+            </li>
+        </ul>
+
+        <p class="card-text">
+            Esto te llevará a la pantalla donde se gestiona la configuración 
+            de horarios y días cerrados.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Horario/uno.png" width="300px" />
+            </div>
+        </div>
+
+        <br />
+
+        <!-- Paso 2 -->
+        <h5 class="card-title">Paso 2: Navegar a la Sección de Días Cerrados</h5>
+
+        <ul>
+            <li>
+                Dentro de la sección de Horario, localiza y presiona el botón
+                <button class="btn btn-secondary">Días Cerrados</button>.
+            </li>
+        </ul>
+
+        <p class="card-text">
+            Esto abrirá una pantalla específica donde puedes visualizar, 
+            agregar o administrar los días cerrados existentes.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Horario/dos.png" width="800px" />
+            </div>
+        </div>
+
+        <br />
+
+        <!-- Paso 3 -->
+        <h5 class="card-title">Paso 3: Seleccionar el Día a Editar</h5>
+
+        <p class="card-text">
+            En la lista de días cerrados, localiza el registro que deseas modificar.
+            Presiona el botón  
+            <button class="btn btn-primary">Editar</button> asociado a ese registro.
+            <br />
+            Esto abrirá un formulario prellenado con la información actual del día cerrado.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/DiaCerrado/editar_tres.png" width="800px" />
+            </div>
+        </div>
+
+        <br />
+
+        <!-- Paso 4 -->
+        <h5 class="card-title">Paso 4: Realizar Modificaciones</h5>
+
+        <p class="card-text fw-bold">Cambiar Fecha o Rango de Fechas:</p>
+
+        <p class="card-text">
+            Ajusta el campo <b>Del día</b> si es un día unico o modifica ambos campos 
+            (Del día, Al día) si se trata de un rango.
+            Asegúrate de que las nuevas fechas no generen conflictos con otros registros.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/DiaCerrado/editar_cuatro.png" width="800px" />
+            </div>
+        </div>
+
+        <br />
+        
+        <!-- Paso 5 -->
+        <h5 class="card-title">Paso 5: Guardar los Cambios</h5>
+
+        <p class="card-text">
+            Una vez realizadas las modificaciones, presiona el botón 
+            <button class="btn btn-primary">Guardar</button>.
+            <br />
+            Si los datos son válidos, aparecerá un mensaje de confirmación como:
+            "¡Día cerrado modificado exitosamente!"
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/DiaCerrado/editar_seis.png" width="800px" />
+            </div>
+        </div>
+
+        <br />
+
+        <br /> <br />
+    </div>
+</div>
+    </div>
+</div>

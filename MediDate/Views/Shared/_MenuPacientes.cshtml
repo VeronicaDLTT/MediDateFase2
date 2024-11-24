@@ -1,0 +1,89 @@
+﻿<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+
+    <div class="offcanvas-body">
+        <ul class="nav nav-pills flex-column mb-auto">
+            <li>
+                <a class="nav-link text-secondary" href="#"><i class="fa-solid fa-bars fa-xl me-3" style="color: #6c757d;"></i>Menú</a>
+            </li>
+
+            <hr class="bg-secondary" />
+
+            <li>
+                <a class="nav-link text-secondary" asp-area="" asp-controller="Cita" asp-action="IndexPaciente"><i class="fa-solid fa-calendar fa-xl me-3" style="color: #6c757d;"></i>Mis Citas</a>
+            </li>
+
+            <hr class="bg-white" />
+
+            <li>
+                <a class="nav-link text-secondary" asp-area="" asp-controller="Cita" asp-action="Historial"><i class="fa-solid fa-book-medical fa-xl me-3" style="color: #6c757d;"></i>Historial Citas Médicas</a>
+            </li>
+
+            <hr class="bg-white" />
+
+            <li>
+                <a class="nav-link text-secondary" asp-area="" asp-controller="Paciente" asp-action="Details"><i class="fa-solid fa-gear fa-xl me-3" style="color: #6c757d;"></i>Configuración de la cuenta</a>
+            </li>
+
+            <hr class="bg-secondary" />
+
+            <li>
+                <a class="nav-link text-secondary" asp-area="" asp-controller="Usuario" asp-action="LogOut"><i class="fa-solid fa-right-from-bracket fa-xl me-3" style="color: #6c757d;"></i>Cerrar sesión</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="container-fluid"> @*Inicio Container de _MenuPacientes.cshtml*@
+
+    <div class="row">
+        @*Inicio Row de _MenuPacientes.cshtml*@
+        <div class="col-md-auto p-0 border border-secondary rounded-2">
+            <div class="d-flex flex-column flex-shrink-0 p-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasWithBackdrop">
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li>
+                        <a class="nav-link" href="#"><i class="fa-solid fa-bars fa-xl" style="color: #6c757d;"></i></a>
+                    </li>
+
+                    <hr class="bg-secondary" />
+
+                    <li>
+                        <a class="nav-link" href="#"><i class="fa-solid fa-calendar fa-xl" style="color: #6c757d;"></i></a>
+                    </li>
+
+                    <hr class="bg-white"/>
+
+                    <li>
+                        <a class="nav-link" href="#"><i class="fa-solid fa-book-medical fa-xl" style="color: #6c757d;"></i></a>
+                    </li>
+
+                    <hr class="bg-white" />
+
+                    <li>
+                        <a class="nav-link" href="#"><i class="fa-solid fa-gear fa-xl" style="color: #6c757d;"></i></a>
+                    </li>
+
+                    <hr class="bg-secondary" />
+
+                    <li>
+                        <a class="nav-link" href="#"><i class="fa-solid fa-right-from-bracket fa-xl" style="color: #6c757d;"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col">
+            @*Inicio Col de _MenuPacientes.cshtml*@
+            
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+                <div class="container">
+                    <div class="row justify-content-center" style="width:100%;">
+                        <div class="col-md-auto">
+                            <h3 class="nav-link"><a asp-area="" asp-controller="Home" asp-action="Index"></a>MediDate</h3>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+    
+
+

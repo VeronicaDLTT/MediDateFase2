@@ -1,0 +1,124 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuGuiaUsuario" />
+
+<div class="col-md-9 lh-lg">
+    <div class="card-header border-bottom border-primary pb-2 mb-4">
+        <h4 class="card-title text-center fw-normal">Editar Consultorio</h4>
+    </div>
+
+    <div class="card-body">
+
+        <p class="card-text">
+            La edición de la información del consultorio permite mantener actualizados 
+            datos esenciales como el nombre y dirección. 
+            Este proceso es importante para garantizar que los pacientes y usuarios del 
+            sistema tengan acceso a la información correcta del lugar donde se brinda atención.
+        </p>
+
+        <!-- Paso 1 -->
+        <h5 class="card-title">Paso 1: Acceder a la Sección de Consultorio</h5>
+
+        <ul>
+            <li>
+                Inicia sesión en el sistema con las credenciales correspondientes.
+            </li>
+            <li>
+                Desde el menú principal, selecciona la opción Consultorio
+            </li>
+        </ul>
+
+        <p class="card-text">
+            Esto te llevará a una pantalla donde se muestran los datos actuales del consultorio.
+        </p>
+
+        <!-- Paso 2 -->
+        <h5 class="card-title">Paso 2: Abrir el Formulario de Edición</h5>
+
+        <ul>
+            <li>
+                Localiza el botón 
+                <button class="btn btn-primary">Editar</button>
+                en la sección del consultorio.
+            </li>
+            <li>
+                Haz clic en este botón para abrir el formulario de edición prellenado 
+                con los datos actuales del consultorio.
+            </li>
+        </ul>
+
+        <!-- Paso 3 -->
+        <h5 class="card-title">Paso 3: Modificar los Datos del Consultorio</h5>
+
+        <p class="card-text">
+            En el formulario, realiza las modificaciones necesarias en los siguientes campos:
+        </p>
+
+        <ul>
+            <li>
+                <b>Nombre del Consultorio: </b>
+                Cambia el nombre si es necesario, asegurándote de que sea representativo.
+            </li>
+            <li>
+                <b>Calle: </b>
+                Actualiza el nombre de la calle donde se encuentra ubicado fisicamente el 
+                Consultorio.
+            </li>
+            <li>
+                <b>Colonia</b> 
+            </li>
+            <li>
+                <b>No. Exterior</b>
+            </li>
+            <li>
+                <b>Código Postal</b>
+            </li>
+        </ul>
+
+        <!-- Paso 4 -->
+        <h5 class="card-title">Paso 4: Guardar cambios</h5>
+
+        <p class="card-text">
+            Una vez realizados los ajustes, presiona el botón
+            <button class="btn btn-primary">Guardar</button>
+        </p>
+
+        <p class="card-text">
+            El sistema mostrará un mensaje de confirmación como:
+            "La información del consultorio fue actualizada exitosamente."
+        </p>
+
+        <br /> <br />
+    </div>
+</div>
+    </div>
+</div>
+

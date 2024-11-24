@@ -1,0 +1,177 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\MediDate.csproj": {}
+  },
+  "projects": {
+    "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate.Models\\MediDate.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate.Models\\MediDate.Models.csproj",
+        "projectName": "MediDate.Models",
+        "projectPath": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate.Models\\MediDate.Models.csproj",
+        "packagesPath": "C:\\Users\\veron\\.nuget\\packages\\",
+        "outputPath": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\veron\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2024.10.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\MediDate.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\MediDate.csproj",
+        "projectName": "MediDate",
+        "projectPath": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\MediDate.csproj",
+        "packagesPath": "C:\\Users\\veron\\.nuget\\packages\\",
+        "outputPath": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\veron\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate.Models\\MediDate.Models.csproj": {
+                "projectPath": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate.Models\\MediDate.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.2.0, )"
+            },
+            "Microsoft.AspNet.WebPages": {
+              "target": "Package",
+              "version": "[3.2.9, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.18, )"
+            },
+            "QuestPDF": {
+              "target": "Package",
+              "version": "[2024.10.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

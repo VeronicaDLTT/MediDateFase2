@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewData["Title"] = "Indice";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["InfoMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["InfoMessage"]', 'info');
+        }
+    </script>
+}
+
+        <partial name="_MenuMedicos" />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto align-self-center">
+                <h4>Bienvenido a MediDate</h4>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <img src="~/img/inicio_sesion.png" class="rounded" height="500px" alt="inicio_sesion">
+        </div>
+
+        </div> @*Fin Col de _MenuMedicos.cshtml*@
+    </div> @* Fin Row de _MenuMedicos.cshtml*@
+</div> @*Fin Container de _MenuMedicos.cshtml*@
+

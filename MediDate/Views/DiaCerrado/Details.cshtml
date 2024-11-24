@@ -1,0 +1,84 @@
+﻿@model MediDate.Models.DiaCerrado
+
+@{
+    ViewData["Title"] = "Details";
+
+    var fecha2Aux = "";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+<partial name="_MenuMedicos" />
+
+<div class="row justify-content-center">
+    <div class="col-md-auto align-self-center">
+        <h1>Días Cerrados Detalles</h1>
+    </div>
+</div>
+
+<div><label></label></div>
+
+<div class="row justify-content-center">
+    <div class="col-md-auto align-self-center">
+
+        <div class="card" style="width: 35rem;">
+            <div class="card-body">
+                <div>
+                    <dl class="row">
+
+                        <dt class="col-sm-4">
+                            @Html.DisplayName("Del Día: ")
+                        </dt>
+                        <dd class="col-sm-8">
+                            @{
+                                string fecha1Formateada = Model.Fecha1.ToString("dddd dd MMM yyyy");
+                            }
+                            @Html.DisplayFor(model => fecha1Formateada)
+                        </dd>
+                        <dt class="col-sm-4">
+                            @Html.DisplayName("Al Día: ")
+                        </dt>
+                        <dd class="col-sm-8">
+                            @if (Model.Fecha2 != null)
+                            {
+                                fecha2Aux = Model.Fecha2.Value.ToString("dddd dd MMM yyyy");
+
+                            }
+                            else
+                            {
+                                fecha2Aux = "";
+
+                            }
+                            @Html.DisplayFor(model => fecha2Aux)
+                        </dd>
+
+                    </dl>
+                </div>
+
+                <div class="row justify-content-between">
+                    <div class="col-md-auto align-content-center">
+                        <a class="text-center link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" asp-action="Index" asp-controller="DiaCerrado">Regresar</a>
+                    </div>
+                    <div class="col-md-auto">
+                        @Html.ActionLink("Eliminar", "Delete", new { IdDiaCerrado = Model.IdDiaCerrado }, new { @class = "text-white btn btn-danger" })
+                        @Html.ActionLink("Editar", "Edit", new { IdDiaCerrado = Model.IdDiaCerrado }, new { @class = "text-white btn btn-primary" })
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+        </div> @*Fin Col de _MenuMedicos.cshtml*@
+    </div> @* Fin Row de _MenuMedicos.cshtml*@
+</div> @*Fin Container de _MenuMedicos.cshtml*@

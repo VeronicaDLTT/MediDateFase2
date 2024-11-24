@@ -1,0 +1,395 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MediDate
+build_property.RootNamespace = MediDate
+build_property.ProjectDir = D:\UACH\09 Noveno Semestre\Proyectos Profesionales II\Proyecto MediDate Fase 2\MediDate\MediDate\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\UACH\09 Noveno Semestre\Proyectos Profesionales II\Proyecto MediDate Fase 2\MediDate\MediDate
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Cita/CreateMedico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YVxDcmVhdGVNZWRpY28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Cita/CreatePaciente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YVxDcmVhdGVQYWNpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Cita/DeleteMedico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YVxEZWxldGVNZWRpY28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Cita/DeletePaciente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YVxEZWxldGVQYWNpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Cita/EditMedico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YVxFZGl0TWVkaWNvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Cita/EditPaciente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YVxFZGl0UGFjaWVudGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Cita/Historial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YVxIaXN0b3JpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Cita/IndexMedico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YVxJbmRleE1lZGljby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Cita/IndexPaciente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0YVxJbmRleFBhY2llbnRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Consultorio/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdG9yaW9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Consultorio/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdG9yaW9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Consultorio/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29uc3VsdG9yaW9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/DetServicio/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0U2VydmljaW9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/DetServicio/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0U2VydmljaW9cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/DetServicio/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0U2VydmljaW9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/DetServicio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGV0U2VydmljaW9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/DiaCerrado/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhQ2VycmFkb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/DiaCerrado/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhQ2VycmFkb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/DiaCerrado/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhQ2VycmFkb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/DiaCerrado/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhQ2VycmFkb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/DiaCerrado/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGlhQ2VycmFkb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/FAQ/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRkFRXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/FAQ/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRkFRXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/FAQ/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRkFRXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/FAQ/IndexAdministrador.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRkFRXEluZGV4QWRtaW5pc3RyYWRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/AgendarCita.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cQWdlbmRhckNpdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/AgregarDiaCerrado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cQWdyZWdhckRpYUNlcnJhZG8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/AgregarHorarioAtencion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cQWdyZWdhckhvcmFyaW9BdGVuY2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/AgregarPrimerServicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cQWdyZWdhclByaW1lclNlcnZpY2lvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/CancelarCita.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cQ2FuY2VsYXJDaXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/EditarConsultorio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cRWRpdGFyQ29uc3VsdG9yaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/EditarCuenta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cRWRpdGFyQ3VlbnRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/EditarDiaCerrado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cRWRpdGFyRGlhQ2VycmFkby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/EditarHorarioAtencion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cRWRpdGFySG9yYXJpb0F0ZW5jaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/EditarServicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cRWRpdGFyU2VydmljaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/EliminarDiaCerrado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cRWxpbWluYXJEaWFDZXJyYWRvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/EliminarServicio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cRWxpbWluYXJTZXJ2aWNpby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/EstadosCita.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cRXN0YWRvc0NpdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/GenerarReceta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cR2VuZXJhclJlY2V0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/ListaHistorial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cTGlzdGFIaXN0b3JpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/ReagendarCita.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cUmVhZ2VuZGFyQ2l0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/GuiaUsuario/ValidacionCuenta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR3VpYVVzdWFyaW9cVmFsaWRhY2lvbkN1ZW50YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Home/Registrarse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3RyYXJzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Horario/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Horario/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Horario/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9yYXJpb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Medico/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Medico/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Medico/DetailsHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvXERldGFpbHNIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Medico/DetailsVerMas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvXERldGFpbHNWZXJNYXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Medico/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Medico/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVkaWNvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Paciente/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Paciente/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Paciente/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Paciente/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFjaWVudGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Receta/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjZXRhXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/FAQsPV/AccederHistorial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZBUXNQVlxBY2NlZGVySGlzdG9yaWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/FAQsPV/AgendarCita.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZBUXNQVlxBZ2VuZGFyQ2l0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/FAQsPV/BarraBusqueda.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZBUXNQVlxCYXJyYUJ1c3F1ZWRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/FAQsPV/CambiarPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZBUXNQVlxDYW1iaWFyUGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/FAQsPV/CancelarCita.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZBUXNQVlxDYW5jZWxhckNpdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/FAQsPV/ConfiguracionCuenta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZBUXNQVlxDb25maWd1cmFjaW9uQ3VlbnRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/FAQsPV/FAQBase.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZBUXNQVlxGQVFCYXNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/FAQsPV/HorariosDeAtencion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZBUXNQVlxIb3Jhcmlvc0RlQXRlbmNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/FAQsPV/HorariosDisponibles.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZBUXNQVlxIb3Jhcmlvc0Rpc3BvbmlibGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/FAQsPV/QueEsMediDate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZBUXNQVlxRdWVFc01lZGlEYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/FAQsPV/ReagendarCita.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZBUXNQVlxSZWFnZW5kYXJDaXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/FAQsPV/RegistrarmeComoEspecialista.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZBUXNQVlxSZWdpc3RyYXJtZUNvbW9Fc3BlY2lhbGlzdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/FAQsPV/RegistrarmeComoPaciente.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZBUXNQVlxSZWdpc3RyYXJtZUNvbW9QYWNpZW50ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/_CitasPorDia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DaXRhc1BvckRpYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/_CitasPorSemana.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DaXRhc1BvclNlbWFuYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/_CitasTodas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DaXRhc1RvZGFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/_DetallesMedico.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9EZXRhbGxlc01lZGljby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/_ListaMedicos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MaXN0YU1lZGljb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/_MenuAdministrador.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZW51QWRtaW5pc3RyYWRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/_MenuGuiaUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZW51R3VpYVVzdWFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/_MenuHome.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZW51SG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/_MenuMedicos.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZW51TWVkaWNvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/_MenuPacientes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NZW51UGFjaWVudGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Usuario/Actualizar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xBY3R1YWxpemFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Usuario/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Usuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Usuario/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Usuario/Restablecer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xSZXN0YWJsZWNlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Usuario/Validacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xWYWxpZGFjaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/UACH/09 Noveno Semestre/Proyectos Profesionales II/Proyecto MediDate Fase 2/MediDate/MediDate/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-k2e1yxk1q3

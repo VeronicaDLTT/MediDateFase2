@@ -1,0 +1,122 @@
+﻿@model MediDate.Models.Consultorio
+
+@{
+    ViewData["Title"] = "Crear cuenta";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <!--Modal si la ejecución en la BD sale bien-->
+    <script>
+            window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--Modal si ocurre una excepción-->
+    <script>
+        window.onload = function () {
+                Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+            }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--Modal si hay que mostrar información relevante al usuario-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<div class="container">
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-auto align-self-center">
+            <h4>Información del Consultorio</h4>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row justify-content-center">
+        <div class="col-md-7 align-self-center">
+            <div class="card">
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label asp-for="Descripcion" class="control-label fw-bold">Nombre del Consultorio</label>
+                                    <input asp-for="Descripcion" class="form-control" placeholder="Nombre del Consultorio" />
+                                    <span asp-validation-for="Descripcion" class="text-danger"></span>
+                                </div>
+
+                                <div><label></label></div>
+
+                                <div class="form-group">
+                                    <label asp-for="Calle" class="control-label fw-bold"></label>
+                                    <input asp-for="Calle" class="form-control" placeholder="Calle" />
+                                    <span asp-validation-for="Calle" class="text-danger"></span>
+                                </div>
+
+                                <div><label></label></div>
+
+                                <div class="form-group">
+                                    <label asp-for="Colonia" class="control-label fw-bold"></label>
+                                    <input asp-for="Colonia" class="form-control" placeholder="Colonia"/>
+                                    <span asp-validation-for="Colonia" class="text-danger"></span>
+                                </div>
+
+                                <div><label></label></div>
+
+                                <div class="form-group">
+                                    <label asp-for="NumExterior" class="control-label fw-bold">No. Exterior</label>
+                                    <input asp-for="NumExterior" class="form-control" placeholder="1234"/>
+                                    <span asp-validation-for="NumExterior" class="text-danger"></span>
+                                </div>
+                                <div><label></label></div>
+                                <div class="form-group">
+                                    <label asp-for="CodigoPostal" class="control-label fw-bold">Código Postal</label>
+                                    <input asp-for="CodigoPostal" class="form-control" placeholder="12345" pattern="[0-9]{5}" />
+                                    <span asp-validation-for="CodigoPostal" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div><label></label></div>
+
+                        <div class="row justify-content-between">
+                            <div class="col-md-auto">
+                                <a onclick="regresar()" class="btn btn-secondary">Regresar</a>
+                            </div>
+                            <div class="col-md-auto">
+                                <input type="submit" value="Crear cuenta" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    @* <div><label></label></div>
+    <div>
+        <a onclick="regresar()" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Regresar</a>
+    </div>
+ *@
+</div>
+
+<script>
+    function regresar() {
+        window.history.back();
+    }
+</script>

@@ -1,0 +1,144 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuGuiaUsuario" />
+
+<div class="col-md-9">
+    <div class="card-header border-bottom border-primary pb-2 mb-4">
+        <h4 class="card-title text-center fw-normal">Reagendar una Cita</h4>
+    </div>
+
+    <div class="card-body">
+
+        <h5 class="card-title">Paso 1. Ingresar a Mis Citas</h5>
+
+        <p class="card-text">
+            Dirigete a la sección Mis Citas del Menú.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Citas/agendar_uno.png" width="300px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+        <h5 class="card-title">Paso 2. Seleccionar Cita a Cancelar</h5>
+
+        <p class="card-text">
+            En la opción Por día o Por semana presiona sobre cualquier cita para ver los Detalles.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Citas/cancelar_uno.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+        <h5 class="card-title">Paso 3. Ingresar a Cancelar Cita</h5>
+
+        <p class="card-text">
+            En los Detalles de la Cita, presiona el botón 
+            <button type="button" class="btn btn-danger">Cancelar</button>
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Citas/cancelar_dos.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+        <h5 class="card-title">Paso 4. Confirmación de Cancelación de Cita</h5>
+
+        <p class="card-text">
+            En la cita seleccionada presione el botón 
+            <button type="button" class="btn btn-primary">
+                Cancelar
+            </button> .
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Citas/cancelar_tres.png" width="800px" />
+            </div>
+        </div>
+
+        <br /><br />
+
+        <h5 class="card-title">Paso 5. Cancelación de Cita</h5>
+
+        <p class="card-text">
+            Despúes, aparecera un mensaje indicando si esta seguro de Cancelar la cita
+            por lo que debera presionar nuevamente el botón de 
+            <button type="button" class="btn btn-danger"> Cancelar </button>
+            .
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Citas/cancelar_cuatro.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+        <p>
+            Si todo salio correctamente, aparecera un mensaje indicando que la cita se canceló exitosamente.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Citas/cancelar_cinco.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+    </div>
+</div>
+    </div>
+</div>

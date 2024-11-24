@@ -1,0 +1,178 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuGuiaUsuario" />
+
+<div class="col-md-9 lh-lg">
+
+    <div class="card-header border-bottom border-primary pb-2 mb-4">
+        <h4 class="card-title text-center fw-normal">Inicio</h4>
+    </div>
+
+    <div class="card-body">
+            
+        La Guía de Usuario de MediDate está diseñada para explicar, 
+        de forma detallada, las funciones y procesos que los médicos pueden 
+        realizar en la plataforma. Las secciones que podras encontrar en la Guía de 
+        Usuario se describen a continuación:
+
+        <br /> <br />
+
+        <hr />
+
+        <h5 class="text-purple">Primeros pasos</h5>
+
+        En esta sección se describen las tareas iniciales que debe realizar un 
+        médico después de crear su cuenta en MediDate:
+
+        <ul>
+            <li>
+                <b>Agregar Horario de Atención: </b> Es el primer paso a realizar
+                cuando el médico Inicia Sesión por primera vez en la plataforma. 
+                Este paso es esencial para que los pacientes puedan conocer sus horarios disponibles.
+            </li>
+            <li>
+                <b>Agregar el Primer Servicio: </b> El segundo proceso que se describe en la Guía 
+                de Usuario es cómo agregar el primer servicio. Este paso es importante ya que
+                de no contar con ningún servicio el médico no podra administrar las citas
+                y los pacientes no podrán acceder a la información del médico para agendar citas.
+            </li>
+            <li>
+                <b>Validación de la Cuenta: </b> Para finalizar con los Primeros Pasos,
+                se encuentra la Validación de la cuenta,
+                es un proceso que realiza la plataforma de MediDate para verificar la información
+                que ha proporcionado el médico especialista.
+            </li>
+        </ul>
+
+        <hr />
+
+        <h5 class="text-purple">Mis Citas</h5>
+
+        En la categoría Mis Citas, se detallan los procedimientos relacionados con la gestión de citas:
+        <ul>
+            
+            <li>
+                <b>Agendar una Cita: </b>Explica cómo registrar una cita en el sistema.
+            </li>
+            <li>
+                <b>Reagendar una Cita: </b>Proporciona instrucciones para cambiar la fecha y 
+                hora de una cita programada.
+            </li>
+            <li>
+                <b>Cancelar una Cita: </b>Indica los pasos para anular una cita previamente agendada.
+            </li>
+
+            <li>
+                <b>Generar una Receta Médica: </b>Describe el proceso para crear y entregar 
+                recetas a los pacientes.
+            </li>
+
+            <li>
+                <b>Estados de las Citas: </b>Expone los diferentes estados que puede 
+                presentar una cita y su significado.
+            </li>
+        </ul>
+
+        <hr />
+
+        <h5 class="text-purple">Historial de Citas Médicas</h5>
+
+        Esta sección explica cómo acceder al Historial de todas las citas. 
+        Aquí, el médico puede consultar registros anteriores, brindando una referencia 
+        valiosa para el seguimiento y continuidad de la atención médica.
+
+        <br />
+
+        <hr />
+
+        <h5 class="text-purple">Horario</h5>
+
+        La categoría Horario permite a los médicos gestionar y personalizar su disponibilidad:
+
+        <ul>
+            <li>
+                <b>Edición de Horarios por Día: </b>
+                Indica cómo ajustar el horario de atención para días específicos.
+            </li>
+        </ul>
+
+        <p class="card-title fw-bold">Dia Cerrado</p>
+
+        Dentro de la sección de horarios, el apartado de Día Cerrado permite añadir días o 
+        períodos completos en los que el consultorio estará inactivo, 
+        facilitando la gestión de días de descanso o vacaciones.
+
+        <br />
+
+        <hr />
+
+        <h5 class="text-purple">Servicios</h5>
+
+        En Servicios, los médicos pueden gestionar los servicios que ofrecen:
+
+        <ul>
+            <li>
+                <b>Editar un Servicio: </b> 
+                Explica cómo actualizar la descripción o el costo de un servicio.
+            </li>
+            <li>
+                <b>Eliminar un Servicio: </b>
+                Indica los pasos para eliminar un servicio ya registrado en la plataforma.
+            </li>
+        </ul>
+
+        <hr />
+
+        <h5 class="text-purple">Consultorio</h5>
+
+        En esta sección se detallan los pasos para editar la información del consultorio, 
+        garantizando que los datos de contacto estén siempre actualizados.
+
+        <br />
+
+        <hr />
+
+        <h5 class="text-purple">Configuración de la Cuenta</h5>
+
+        En Configuración de la Cuenta, se describen las instrucciones para actualizar la 
+        información personal y profesional del perfil. 
+        
+        <br />
+
+        Esta guía proporciona una referencia completa para facilitar el uso de MediDate, ayudando a los médicos a gestionar su agenda, sus servicios, y sus citas de manera eficiente.
+    </div>
+
+    <br /> <br />
+
+</div>
+
+    </div>
+</div>

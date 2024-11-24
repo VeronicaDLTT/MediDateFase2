@@ -1,0 +1,221 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuGuiaUsuario" />
+
+<div class="col-md-9 lh-lg">
+    <div class="card-header border-bottom border-primary pb-2 mb-4">
+        <h4 class="card-title text-center fw-normal">Estados de las Citas</h4>
+    </div>
+
+    <div class="card-body">
+
+        <p class="card-text">
+            Las citas médicas pueden tener los siguientes estados, cada uno con una finalidad específica y 
+            reglas claras sobre cómo y cuándo se asignan:
+        </p>
+
+        <hr />
+        <!-- En espera -->
+        <h5 class="card-title text-purple">En espera</h5>
+
+        <p class="card-text">
+            <b>Descripción: </b>
+            El estado 
+            <label class="bg-info text-blac text-center fw-bold p-1 rounded-1 col-md-auto">
+                En espera
+            </label>
+            indica que la cita está programada pero aún no ha ocurrido.
+            Representa el estado inicial tras agendar una cita.
+        </p>
+
+        <p class="card-text">
+            <b>Condiciones para este estado: </b>
+        </p>
+        
+        <ul>
+            <li>La cita aún no ha llegado al día programado.</li>
+            <li>Ni el especialista ni el paciente han cancelado la cita.</li>
+            <li>El paciente no se ha declarado como ausente.</li>
+            <li>El especialista no ha finalizado la cita.</li>
+        </ul>
+
+        <p class="card-text">
+            <b>Cómo funciona: </b>
+            Este estado se asigna automáticamente cuando se agenda una nueva cita. 
+            Se mantendrá así hasta que cambie por alguna acción específica (atención, 
+            cancelación, o registro de ausencia).
+        </p>
+
+        <hr />
+
+        <!-- Finalizada -->
+        <h5 class="card-title text-purple">Finalizada</h5>
+
+        <p class="card-text">
+            <b>Descripción: </b>
+            El estado 
+            <label class="bg-success text-white text-center fw-bold p-1 rounded-1 col-md-auto">
+                Finalizada
+            </label> 
+            se asigna cuando el especialista confirma que atendió la cita
+            y completó la consulta médica en tiempo y forma.
+        </p>
+
+        <p class="card-text">
+            <b>Condiciones para este estado: </b>
+        </p>
+
+        <ul>
+            <li>El paciente asistió a la cita.</li>
+            <li>El especialista presionó el botón Finalizar en los detalles de la cita.</li>
+        </ul>
+
+        <p class="card-text">
+            <b>Cómo funciona: </b>
+            El especialista debe ingresar a los detalles de la cita en la plataforma y 
+            cambiar manualmente el estado a "Finalizar".
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/EstadosCita/ausente.png" width="800px" />
+            </div>
+        </div>
+
+        <hr />
+
+        <!-- Cancelada -->
+        <h5 class="card-title text-purple">Cancelada</h5>
+
+        <p class="card-text">
+            <b>Descripción: </b>
+            El estado 
+            <label class="bg-danger text-white text-center fw-bold p-1 rounded-1 col-md-auto">
+                Cancelada
+            </label> 
+            indica que la cita ha sido anulada por alguna de las partes,
+            ya sea el paciente o el especialista, antes de la hora programada.
+        </p>
+
+        <p class="card-text">
+            <b>Condiciones para este estado: </b>
+        </p>
+
+        <ul>
+            <li>El paciente cancela la cita desde su perfil.</li>
+            <li>El especialista cancela la cita desde la interfaz de gestión de citas.</li>
+        </ul>
+
+        <p class="card-text">
+            <b>Cómo funciona: </b>
+            La plataforma asigna este estado automáticamente cuando se realiza la acción 
+            de cancelación desde cualquier parte autorizada. Una vez en este estado, 
+            la cita no puede ser reactivada ni modificada.
+        </p>
+
+        <hr />
+
+        <!-- Ausente -->
+        <h5 class="card-title text-purple">Ausente</h5>
+
+        <p class="card-text">
+            <b>Descripción: </b>
+            El estado 
+            <label class="bg-dark text-white text-center fw-bold p-1 rounded-1 col-md-auto">
+                Ausente
+            </label> 
+            se utiliza para registrar que el paciente no se presentó a
+            la cita programada.
+        </p>
+
+        <p class="card-text">
+            <b>Condiciones para este estado: </b>
+        </p>
+
+        <ul>
+            <li>La fecha y hora de la cita ya han pasado.</li>
+            <li>El paciente no asistió al consultorio o lugar asignado.</li>
+            <li>El especialista declara manualmente al paciente como "Ausente".</li>
+        </ul>
+
+        <p class="card-text">
+            <b>Cómo funciona: </b>
+            El especialista debe ingresar a los detalles de la cita y presionar el botón 
+            <b>No se presentó</b> para asignar este estado. Esto sirve como un registro de incumplimiento del paciente.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/EstadosCita/ausente.png" width="800px" />
+            </div>
+        </div>
+
+        <hr />
+
+        <!-- Pendiente -->
+        <h5 class="card-title text-purple">Pendiente</h5>
+
+        <p class="card-text">
+            <b>Descripción: </b>
+            El estado 
+            <label class="bg-warning text-white text-center fw-bold p-1 rounded-1 col-md-auto">
+                Pendiente
+            </label> 
+            se asigna automáticamente por el sistema a citas que no fueron
+            atendidas ni canceladas después de la fecha y hora programada. Representa una cita no 
+            atendida por parte del especialista.
+        </p>
+
+        <p class="card-text">
+            <b>Condiciones para este estado: </b>
+        </p>
+
+        <ul>
+            <li>La cita estaba en estado "En espera" pero la fecha y hora de la cita ya han pasado.</li>
+            <li>Ni el paciente ni el especialista realizaron alguna acción sobre la cita (cancelación, finalización, ausencia).</li>
+        </ul>
+
+        <p class="card-text">
+            <b>Cómo funciona: </b>
+            La plataforma verifica automáticamente las citas que quedaron en estado 
+            "En espera" al pasar la fecha actual y les asigna el estado "Pendiente". 
+            Esto permite identificar citas sin resolución.
+        </p>
+
+        <br /> <br />
+    </div>
+</div>
+    </div>
+</div>

@@ -1,0 +1,61 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuGuiaUsuario" />
+
+<div class="col-md-9">
+    <div class="card-header border-bottom border-primary pb-2 mb-4">
+        <h4 class="card-title text-center fw-normal">Validación de la Cuenta</h4>
+    </div>
+
+    <div class="card-body">
+        <p class="card-text">
+            Por último, para Administrar Citas Médicas, es necesario esperar la validación de su información
+            como Médico.
+            La Validación es por parte del personal de MediDate, el proceso puede tardar de 3 a 7 días.
+            <br />
+            Sabrá que su información fue validada cuando pueda ingresar a la sección de Mis Citas del Menú,
+            mientras le aparecerá el siguiente texto:
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/validacion_uno.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+    </div>
+</div>
+    </div>
+</div>

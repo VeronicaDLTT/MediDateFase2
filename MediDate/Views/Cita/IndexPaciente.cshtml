@@ -1,0 +1,131 @@
+﻿@model IEnumerable<MediDate.Models.Cita>
+
+@{
+    ViewData["Title"] = "Mis Citas";
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--Modal si ocurre una excepción-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--Modal si ocurre una excepción-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <!--Cita agendada exitosamente-->
+    <!--Horario registrado exitosamente-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+<partial name="_MenuPacientes" />
+
+    <div class="container" style="height:600px">
+
+        <div><label></label></div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto align-self-center">
+                <h4>Mis Citas</h4>
+            </div>
+        </div>
+
+        <div><label></label></div>
+
+        <div class="table-responsive">
+            @if(Model.Count()>0){
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+
+                            <th>
+                                @Html.DisplayNameFor(model => model.Fecha)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Hora)
+                            </th>
+                            <th>
+                                @Html.DisplayName("Especialista")
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Servicio)
+                            </th>
+                            <th>
+                                @Html.DisplayName("Estado")
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @{
+                                        string fechaFormateada = item.Fecha.ToString("dd/MM/yyyy");
+                                    }
+                                    @Html.DisplayFor(modelItem => fechaFormateada)
+                                </td>
+                                <td>
+                                    @{
+                                        string horaFormateada = item.Hora.ToString("hh:mm tt");
+                                    }
+                                    @Html.DisplayFor(modelItem => horaFormateada)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NombreMedico)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Servicio)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.DescEstado)
+                                </td>
+                                <td>
+                                    @Html.ActionLink("Reagendar", "EditPaciente", new { IdCita = item.IdCita}, new{@class="nav-link text-white btn btn-primary", @style="width:120px; display: inline-block; margin-right: 10px;"})
+                                    @Html.ActionLink("Cancelar", "DeletePaciente", new { IdCita = item.IdCita}, new{@class="nav-link text-white btn btn-danger", @style="width:120px; display: inline-block;"})
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <p>
+                    <a class="btn btn-secondary" asp-controller="Paciente" asp-action="Index">Ir a Inicio</a>
+                </p>
+            }else{
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Sin Citas</h5>
+                        <p class="card-text">No hay citas programadas por el momento.</p>
+                        <i class="fa-solid fa-circle-exclamation fa-2xl" style="color: #712cf9;"></i>
+                    </div>
+                </div>
+                <div><label></label></div>
+                <p>
+                    <a class="btn btn-secondary" asp-controller="Paciente" asp-action="Index">Ir a Inicio</a>
+                </p>
+            }
+        </div>
+    </div>
+        </div> @*Fin Col de _MenuPacientes.cshtml*@
+    </div> @* Fin Row de _MenuPacientes.cshtml*@
+</div> @*Fin Container de _MenuPacientes.cshtml*@
+
+

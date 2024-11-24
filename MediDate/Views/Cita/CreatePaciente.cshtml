@@ -1,0 +1,260 @@
+﻿@model MediDate.Models.Cita
+
+@{
+    ViewData["Title"] = "Agendar Cita";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <!--Modal si la ejecución en la BD sale bien-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--Modal si ocurre una excepción-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--Modal si hay que mostrar información relevante al usuario-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuPacientes" />
+
+<div class="container">
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-auto align-self-center">
+            <h4>Agendar Cita</h4>
+        </div>
+    </div>
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-7 align-self-center">
+            <div class="card">
+                <div class="card-body">
+                    <form asp-action="CreatePaciente">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label asp-for="NombreMedico" class="control-label fw-bold"></label>
+                                    <input asp-for="NombreMedico" class="form-control" readonly/>
+                                    <span asp-validation-for="NombreMedico" class="text-danger"></span>
+                                </div>
+
+                                <div><label></label></div>
+
+                                <div class="form-group">
+                                    <label asp-for="IdDetServicio" class="control-label fw-bold">Servicio</label>
+                                    <select asp-for="IdDetServicio" asp-items="@ViewBag.IdDetServicio" class="form-control"></select>
+                                    <span asp-validation-for="IdDetServicio" class="text-danger"></span>
+                                </div>
+
+                                <div><label></label></div>
+
+                                <div class="form-group">
+                                    <label asp-for="Fecha" class="control-label fw-bold"></label>
+                                    <input id="fechaInput" asp-for="Fecha" class="form-control" type="date" min="@ViewBag.ProximoDiaDisponible.ToString("yyyy-MM-dd")" required />
+                                    <span asp-validation-for="Fecha" class="text-danger"></span>
+                                </div>
+
+                                <div id="alertDiaCerrado" class="alert alert-info" role="alert" style="display: none;"></div>
+
+                                <div><label></label></div>
+
+                                <div class="form-group">
+                                    <label asp-for="Hora" class="control-label fw-bold"></label>
+                                    @* <input asp-for="Hora" class="form-control" type="time" min="@ViewBag.HoraInicio" value="@ViewBag.HoraInicio" step="3600" required /> *@
+                                    <input id="horaInput" asp-for="Hora" class="form-control" type="time" min="@ViewBag.HoraInicio" step="3600" required />
+                                    <span asp-validation-for="Hora" class="text-danger"></span>
+                                </div>
+
+                                <div id="alertHorario" class="alert alert-info" role="alert" style="display: none;"></div>
+                            </div>
+                        </div>
+
+                        <div><label></label></div>
+
+                        <div class="row justify-content-between">
+                            <div class="col-md-auto align-content-center">
+                                <a asp-controller="Paciente" asp-action="Index" class="btn btn-secondary">Ir a Inicio</a>
+                            </div>
+                            <div class="col-md-auto">
+                                <input type="submit" value="Agendar" class="btn btn-primary" />
+                            </div>
+                        </div>
+           
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div> @*Fin Col de _MenuPacientes.cshtml*@
+    </div> @* Fin Row de _MenuPacientes.cshtml*@
+</div> @*Fin Container de _MenuPacientes.cshtml*@
+
+<script>
+    var diasCerrados = @Html.Raw(ViewBag.DiasCerradosJson);
+    var horariosAbiertos = @Html.Raw(ViewBag.HorariosAbiertosJson);
+    var horariosCerrados = @Html.Raw(ViewBag.HorariosCerradosJson);
+
+    var fechaInput = document.getElementById('fechaInput');
+    var alertDiaCerrado = document.getElementById('alertDiaCerrado');
+    var horaInput = document.getElementById('horaInput');
+    var alertHorario = document.getElementById('alertHorario');
+
+    var horarioAtencionC = false; 
+    var diaC = false;
+
+    function getDayOfWeek(date) {
+        var days = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+        return days[date.getDay()];
+    }
+
+    function crearFecha(dateSF) {
+        // Separar la cadena de la fecha en año, mes y día
+        var partes = dateSF.split('-');
+
+        // Crear el objeto Date con año, mes (restando 1 porque es 0-indexado) y día
+        var fecha = new Date(partes[0], partes[1] - 1, partes[2], 0, 0, 0);
+
+        // Retornar la fecha ya creada
+        return fecha;
+    }
+
+    function horarioAtencionCerrado(dateSelected) {
+        horarioAtencionC = false;
+
+        horariosCerrados.forEach(function (horarioCerrado) {
+            
+            if (horarioCerrado.Dia == getDayOfWeek(dateSelected)) {
+                horarioAtencionC = true;
+            }
+
+        });
+
+    }
+
+    function diaSeleccionadoCerrado(dateSelected) {
+        diaC = false;
+
+        diasCerrados.forEach(function (diaCerrado) {
+
+            var fechaInicio = crearFecha(diaCerrado.FechaInicio);
+
+            if(diaCerrado.FechaFin == null){
+
+                if (fechaInicio.getTime() === dateSelected.getTime()) {
+                    diaC = true;
+                }
+                
+            } else if ((diaCerrado.FechaFin != null) && (diaCerrado.FechaInicio != null)) {
+                var fechaFin = crearFecha(diaCerrado.FechaFin);
+
+                if ((dateSelected >= fechaInicio) && (dateSelected <= fechaFin)) {
+                    diaC = true;
+                }
+            }
+        });
+    }
+
+    fechaInput.addEventListener('input', function (e) {
+        var selectedDate = e.target.value;
+        var parts = selectedDate.split('-');  // Separar la fecha en [año, mes, día]
+        var selected = new Date(parts[0], parts[1] - 1, parts[2], 0, 0, 0);  // Año, mes (0-index), día, hora 0, minutos 0, segundos 0
+
+        var dayOfWeek = getDayOfWeek(selected);
+
+        var horariosDelDia = horariosAbiertos.find(function (horario) {
+            return horario.Dia === dayOfWeek;
+        });
+
+        horaInput.value = '';
+        horaInput.min = '';
+        horaInput.max = '';
+
+        if (horariosDelDia) {
+            var availableTimes = horariosDelDia.Horarios;
+            var minHour = availableTimes[0].HoraInicio;
+            var maxHour = (availableTimes[availableTimes.length - 1].HoraFin);
+
+            horaInput.min = minHour; 
+            horaInput.max = maxHour; 
+
+            horaInput.value = minHour;
+        }
+
+        horarioAtencionCerrado(selected);
+
+        if (horarioAtencionC) {
+            alertDiaCerrado.textContent = 'El día ' + getDayOfWeek(selected) + ' no está disponible. Por favor, seleccione otro.';
+            alertDiaCerrado.style.display = 'block';
+            fechaInput.value = fechaInput.min;
+        }else{
+            diaSeleccionadoCerrado(selected);
+
+            if(!diaC){
+                alertDiaCerrado.textContent = '';
+                alertDiaCerrado.style.display = 'none';
+            }else{
+                var day = selected.getUTCDate().toString().padStart(2, '0');
+                var month = (selected.getUTCMonth() + 1).toString().padStart(2, '0');
+                var year = selected.getUTCFullYear();
+                var fechaFormateda = day + '/' + month + '/' + year;
+
+                alertDiaCerrado.textContent = 'El día ' + fechaFormateda + ' no está disponible. Por favor seleccione otro.';
+                alertDiaCerrado.style.display = 'block';
+                fechaInput.value = fechaInput.min;
+            }
+        }
+    });
+
+    horaInput.addEventListener('input', function (e) {
+        var selectedTime = e.target.value;
+        var selectedDate = crearFecha(fechaInput.value);
+        var dayOfWeek = getDayOfWeek(selectedDate);
+
+        // Encontrar los horarios para el día seleccionado
+        var horariosDelDia = horariosAbiertos.find(function (horario) {
+            return horario.Dia === dayOfWeek;
+        });
+
+        // Validar si la hora está dentro de uno de los rangos permitidos
+        if (horariosDelDia) {
+            var isTimeValid = horariosDelDia.Horarios.some(function (rango) {
+                return selectedTime >= rango.HoraInicio && selectedTime <= (rango.HoraFin);
+            });
+
+            if (!isTimeValid) {
+                alertHorario.textContent = 'El horario de citas permitido para ' + dayOfWeek + ' es de: ' +
+                    horariosDelDia.Horarios.map(rango => rango.HoraInicio + ' a ' + rango.HoraFin).join(' y de ');
+                alertHorario.style.display = 'block';  // Mostrar el mensaje de error
+                e.target.value = '';  // Limpiar la hora seleccionada
+            } else {
+                alertHorario.style.display = 'none';  // Ocultar el mensaje si la hora es válida
+            }
+        }
+    });
+</script>

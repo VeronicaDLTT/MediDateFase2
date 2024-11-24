@@ -1,0 +1,171 @@
+﻿<style>
+    .text-content {
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* Número de líneas visibles */
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+</style>
+
+@model IEnumerable<MediDate.Models.FAQ>
+
+@{
+    ViewData["Title"] = "Lista de FAQs";
+}
+
+@{
+    var categorias = ViewBag.Categorias as IEnumerable<MediDate.Models.Categoria>;
+    var categoria = new Categoria();
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <!--Modal si la ejecución en la BD sale bien-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--Modal si ocurre una excepción-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--Modal si hay que mostrar información relevante al usuario-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuAdministrador" />
+
+<div class="container">
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-auto align-self-center">
+            <h4>Preguntas Frecuentes (FAQs)</h4>
+        </div>
+    </div>
+
+    <div><label></label></div>
+
+    <div class="row justify-content-end">
+        <div class="col p-1"></div>
+        <div class="col p-1"></div>
+        <div class="col p-1"></div>
+        <div class="col p-1"></div>
+        <div class="col p-1"></div>
+        <div class="col p-1">
+            <a class="btn btn-primary" asp-area="" asp-controller="FAQ" asp-action="Create">Agregar</a>
+        </div>
+    </div>
+
+    @if (Model.Count() > 0)
+    {
+
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IdCategoria)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DescripcionFAQ)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Respuesta)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Accion)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model) {
+                        <tr>
+                            <td>
+                                @{
+                                    categoria = categorias.FirstOrDefault(c=> c.IdCategoria == item.IdCategoria);
+                                }
+
+                                @Html.DisplayName(categoria.DescripcionCategoria)
+                            </td>
+                            <td style="max-width:300px">
+                                @Html.DisplayFor(modelItem => item.DescripcionFAQ)
+                            </td>
+                            <td>
+                                <div class="text-truncate" style="max-width: 300px;">
+                                    
+                                        @Html.Raw(item.Respuesta)
+                                    
+                                </div>
+                                @* @if (item.Respuesta != null)
+                                {
+                                    <a href="javascript:void(0);" class="text-primary" onclick="mostrarTextoCompleto(@item.IdFAQ)">Leer más</a>
+                                } *@
+                                
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Accion)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Editar", "Edit", new { IdFAQ = item.IdFAQ }, new { @class = "nav-link text-white btn btn-primary", @style = "display: inline-block; margin-right: 10px;" })
+                                @Html.ActionLink("Eliminar", "Delete", new { IdFAQ = item.IdFAQ }, new { @class = "nav-link text-white btn btn-danger", @style = "display: inline-block;" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+            
+    }
+    else
+    {
+        <div class="row justify-content-center">
+            <div class="col-md-9 px-5 p-1 rounded-2">
+                <div class="card text-center">
+                    <div class="card-body">
+
+                        <p class="card-text fs-5">No cuenta con preguntas registradas.</p>
+                        <i class="fa-solid fa-circle-exclamation fa-2xl" style="color: #712cf9;"></i>
+                        @* <img src="~/img/signo-de-exclamacion-en-un-circulo.png" alt="not_found"/> *@
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>
+        </div> @*Fin Col de _MenuAdministrador.cshtml*@
+    </div> @* Fin Row de _MenuAdministrador.cshtml*@
+</div> @*Fin Container de _MenuAdministrador.cshtml*@
+
+<script>
+    function mostrarTextoCompleto(idFAQ) {
+        var contentDiv = document.getElementById('respuesta-' + idFAQ);
+        contentDiv.classList.toggle('text-truncate'); // Quita la clase truncada para mostrar todo el contenido
+
+        // Alterna el texto del enlace entre "Leer más" y "Leer menos"
+        var link = contentDiv.nextElementSibling;
+        if (link.innerHTML === "Leer más") {
+            link.innerHTML = "Leer menos";
+        } else {
+            link.innerHTML = "Leer más";
+        }
+    }
+</script>

@@ -1,0 +1,167 @@
+﻿@model MediDate.Models.Horario
+
+@{
+    ViewData["Title"] = "Editar Horario";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <!--Modal si la ejecución en la BD sale bien-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--Modal si ocurre una excepción-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--Modal si hay que mostrar información relevante al usuario-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}@if (TempData["AlertMessage"] != null)
+{
+    <!--Modal si ocurre una excepción-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuMedicos" />
+
+<div class="container">
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-auto align-self-center">
+            <h4>Editar Horario de Atención</h4>
+        </div>
+    </div>
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-7 align-self-center">
+            <div class="card">
+                <div class="card-body">
+                    <form asp-action="Edit">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input asp-for="IdHorario" class="form-control" type="hidden"/>
+                                </div>
+                                <div class="form-group">
+                                    <input asp-for="Dia" class="form-control" type="hidden" />
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label"><b>Día</b></label>
+                                    <input asp-for="DiaDescripcion" class="form-control" type="text" readonly/>
+                                    <span asp-validation-for="DiaDescripcion" class="text-danger"></span>
+                                </div>
+
+                                <div><label></label></div>
+
+                                @if(ViewBag.EstadoBool){
+                                    <div class="form-group">
+                                        <label class="control-label"><b>Hora de Apertura</b></label>
+                                        <input asp-for="HoraInicio" class="form-control" type="time" id="HoraInicio" name="HoraInicio" value="" readonly />
+                                        <span asp-validation-for="HoraInicio" class="text-danger"></span>
+                                    </div>
+
+                                    <div><label></label></div>
+
+                                    <div class="form-group">
+                                        <label class="control-label"><b>Hora de Cierre</b></label>
+                                        <input asp-for="HoraFin" class="form-control" type="time" id="HoraFin" name="HoraFin" value="" readonly />
+                                        <span asp-validation-for="HoraFin" class="text-danger"></span>
+                                    </div>
+
+                                    <div><label></label></div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" checked value="true" id="Cerrado" name="Cerrado" onchange="bloquearHorarios('HoraInicio','HoraFin', this)">
+                                        <label class="form-check-label">Cerrado</label>
+                                    </div>
+
+                                }
+                                else
+                                {
+                                    <div class="form-group">
+                                        <label class="control-label fw-bold">Hora de Apertura</label>
+                                        <input asp-for="HoraInicio" class="form-control" type="time" id="HoraInicio" name="HoraInicio" />
+                                        <span asp-validation-for="HoraInicio" class="text-danger"></span>
+                                    </div>
+
+                                    <div><label></label></div>
+
+                                    <div class="form-group">
+                                        <label class="control-label fw-bold">Hora de Cierre</label>
+                                        <input asp-for="HoraFin" class="form-control" type="time" id="HoraFin" name="HoraFin" />
+                                        <span asp-validation-for="HoraFin" class="text-danger"></span>
+                                    </div>
+
+                                    <div><label></label></div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="true" id="Cerrado" name="Cerrado" onchange="bloquearHorarios('HoraInicio','HoraFin', this)">
+                                        <label class="form-check-label">Cerrado</label>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+
+                        <div><label></label></div>
+
+                        <div class="row justify-content-between">
+                            <div class="col-md-auto">
+                                <a class="btn btn-secondary" asp-action="Details" asp-controller="Horario">Regresar</a>
+                            </div>
+                            <div class="col-md-auto">
+                                <input type="submit" value="Guardar" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div> @*Fin Col de _MenuMedicos.cshtml*@
+    </div> @* Fin Row de _MenuMedicos.cshtml*@
+</div> @*Fin Container de _MenuMedicos.cshtml*@
+
+<script>
+    function bloquearHorarios(hrInicioId, hrFinId, chkBox) {
+    @*  Obtener los inputs de hora de apertura y cierre *@
+        var horaInicio = document.getElementById(hrInicioId);
+        var horaFin = document.getElementById(hrFinId);
+
+    @*  Si el checkbox está marcado, se añade la propiedad readonly *@
+        if (chkBox.checked) {
+            horaInicio.setAttribute('readonly', true);
+            horaFin.setAttribute('readonly', true);
+        } else {
+            // Si se desmarca el checkbox, se quita la propiedad readonly
+            horaInicio.removeAttribute('readonly');
+            horaFin.removeAttribute('readonly');
+        }
+    }
+</script>
+

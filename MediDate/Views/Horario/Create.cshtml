@@ -1,0 +1,324 @@
+﻿@model MediDate.Models.Horario
+
+@{
+    ViewData["Title"] = "Agregar Horario";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <!--Modal si la ejecución en la BD sale bien-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--Modal si ocurre una excepción-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--Modal si hay que mostrar información relevante al usuario-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container">
+        <div class="row justify-content-center" style="width:100%;">
+            <div class="col-md-auto">
+                <h3 style="color:#712cf9">MediDate</h3>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div><label></label></div>
+
+<div class="row justify-content-center">
+    <div class="col-md-auto align-self-center">
+        <h4>Agregar Horario de Atención</h4>
+    </div>
+</div>
+
+<div><label></label></div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-9 align-self-center">
+            <div class="card">
+                <div class="card-body">
+                    <form asp-action="Create" id="form_horario" name="form_horario">
+                        <div id="horariosContainer">
+                            <div class="row horario-group">
+                                <div class="row text-center">
+                                    <div class="col border border-primary rounded-2">
+                                        <label class="control-label "><b>Hora</b></label>
+                                    </div>
+                                    <div class="col border border-primary rounded-2">
+                                        <label class="control-label "><b>Día</b></label>
+                                    </div>
+                                </div>
+
+                                <div><label></label></div>
+
+                                <div class="row">
+                                    @* Horas *@
+                                    <div class="col">
+                                        <label class="control-label">Hora de Apertura: </label>
+                                        <input class="form-control" type="time" id="HoraInicio[0]" name="HoraInicio[0]" />
+                                    
+                                        <div><label></label></div>
+
+                                        <label class="control-label">Hora de Cierre: </label>
+                                        <input class="form-control" type="time" id="HoraFin[0]" name="HoraFin[0]" />
+                                    
+                                        <div><label></label></div>
+
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="True" id="Cerrado[0]" name="Cerrado[0]" onchange="bloquearHorarios('HoraInicio[0]','HoraFin[0]', this)">
+                                            <label class="form-check-label">Cerrado</label>
+                                        </div>
+                                    
+                                    </div>
+
+                                    @* Días *@
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="True" name="chkLunes[0]">
+                                            <label class="form-check-label">Lunes</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="True" name="chkMartes[0]">
+                                            <label class="form-check-label">Martes</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="True" name="chkMiercoles[0]">
+                                            <label class="form-check-label">Miércoles</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="True" name="chkJueves[0]">
+                                            <label class="form-check-label">Jueves</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="True" name="chkViernes[0]">
+                                            <label class="form-check-label">Viernes</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="True" name="chkSabado[0]">
+                                            <label class="form-check-label">Sábado</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="True" name="chkDomingo[0]">
+                                            <label class="form-check-label">Domingo</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div><label></label></div>
+
+                        @* Botones *@
+                        <div class="row justify-content-between">
+                            <div class="col-md-auto"><a class="btn btn-secondary" asp-area="" asp-controller="Usuario" asp-action="LogOut">Cerrar sesión</a></div>
+                            <div class="col-md-auto">
+                                <button type="button" class="btn btn-success" onclick="agregarHorario()">Agregar Horario</button>
+                                <button type="button" id="guardarBtn" class="btn btn-primary">Guardar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <a asp-action="AgregarHorarioAtencion" asp-controller="GuiaUsuario" class="p-3" target="_blank">¿Cómo agregar un Horario de Atención?</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div><label></label></div>
+        </div> @*Fin Col de _MenuMedicos.cshtml*@
+    </div> @* Fin Row de _MenuMedicos.cshtml*@
+</div> @*Fin Container de _MenuMedicos.cshtml*@
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    let horarioCount = 0;
+
+    $('#guardarBtn').click(function () {
+        const listasHorarios = obtenerListasDeHorarios(); @* // Llama a la función que obtiene las listas *@
+        const formData = new FormData(); @* // Crear un objeto FormData *@
+
+        @* // Añadir los arrays al FormData *@
+        listasHorarios.HoraInicio.forEach((hora, index) => {
+            formData.append(`HoraInicio[${index}]`, hora);
+        });
+
+        listasHorarios.HoraFin.forEach((hora, index) => {
+            formData.append(`HoraFin[${index}]`, hora);
+        });
+
+        listasHorarios.chkLunes.forEach((checked, index) => {
+            formData.append(`chkLunes[${index}]`, checked);
+        });
+
+        listasHorarios.chkMartes.forEach((checked, index) => {
+            formData.append(`chkMartes[${index}]`, checked);
+        });
+
+        listasHorarios.chkMiercoles.forEach((checked, index) => {
+            formData.append(`chkMiercoles[${index}]`, checked);
+        });
+
+        listasHorarios.chkJueves.forEach((checked, index) => {
+            formData.append(`chkJueves[${index}]`, checked);
+        });
+
+        listasHorarios.chkViernes.forEach((checked, index) => {
+            formData.append(`chkViernes[${index}]`, checked);
+        });
+
+        listasHorarios.chkSabado.forEach((checked, index) => {
+            formData.append(`chkSabado[${index}]`, checked);
+        });
+
+        listasHorarios.chkDomingo.forEach((checked, index) => {
+            formData.append(`chkDomingo[${index}]`, checked);
+        });
+
+        listasHorarios.Cerrado.forEach((checked, index) => {
+            formData.append(`Cerrado[${index}]`, checked);
+        });
+
+        @* // Enviar las listas usando $.ajax *@
+        $.ajax({
+            url: '@Url.Action("Create", "Horario")', // Cambia la URL si es necesario
+            type: 'POST',
+            data: formData,
+            processData: false, // No procesa los datos como string
+            contentType: false, // No establece un tipo de contenido por defecto
+            success: function (response) {
+                @* Redirigimos a la página principal del Medico si se agregó el horario correctamente *@
+                window.location.href = '@Url.Action("Index", "Medico")';
+            },
+            error: function (xhr, status, error) {
+                alert('Error al enviar datos: ' + error);
+            }
+        });
+    });
+
+    function agregarHorario() {
+        horarioCount++;
+
+        const container = document.getElementById('horariosContainer');
+        const newHorarioGroup = document.querySelector('.horario-group').cloneNode(true);
+
+        newHorarioGroup.querySelectorAll('input').forEach(input => {
+            @* // Actualiza el índice de los nombres e IDs *@
+            input.name = input.name.replace(/\d+/g, horarioCount);
+            input.id = input.id.replace(/\d+/g, horarioCount);
+            input.value = '';  // Limpia los valores de los inputs
+            input.checked = false; // Deselecciona checkboxes
+
+            @* // Asigna el evento onchange al checkbox Cerrado *@
+            if (input.type === 'checkbox' && input.name.includes('Cerrado')) {
+                input.onchange = function () {
+                    bloquearHorarios(`HoraInicio[${horarioCount}]`, `HoraFin[${horarioCount}]`, this);
+                };
+            }
+        });
+
+        container.appendChild(newHorarioGroup);
+    }
+
+    function obtenerListasDeHorarios() {
+        const horaInicio = [];
+        const horaFin = [];
+        const chkLunes = [];
+        const chkMartes = [];
+        const chkMiercoles = [];
+        const chkJueves = [];
+        const chkViernes = [];
+        const chkSabado = [];
+        const chkDomingo = [];
+        const cerrado = [];
+
+        const horarioGroups = document.querySelectorAll('.horario-group');
+
+        horarioGroups.forEach((group, index) => {
+            @* // Hora de Inicio y Fin *@
+            const horaInicioInput = group.querySelector(`input[name="HoraInicio[${index}]"]`);
+            const horaFinInput = group.querySelector(`input[name="HoraFin[${index}]"]`);
+
+            @* // Verifica si están vacíos, y si es así, asigna "00:00:00" *@
+            horaInicio.push(horaInicioInput ? horaInicioInput.value || "00:00:00" : "00:00:00");
+            horaFin.push(horaFinInput ? horaFinInput.value || "00:00:00" : "00:00:00");
+
+            @* // Días de la semana *@
+            const chkLunesInput = group.querySelector(`input[name="chkLunes[${index}]"]`);
+            const chkMartesInput = group.querySelector(`input[name="chkMartes[${index}]"]`);
+            const chkMiercolesInput = group.querySelector(`input[name="chkMiercoles[${index}]"]`);
+            const chkJuevesInput = group.querySelector(`input[name="chkJueves[${index}]"]`);
+            const chkViernesInput = group.querySelector(`input[name="chkViernes[${index}]"]`);
+            const chkSabadoInput = group.querySelector(`input[name="chkSabado[${index}]"]`);
+            const chkDomingoInput = group.querySelector(`input[name="chkDomingo[${index}]"]`);
+
+            @* // Verificación robusta si existe el input, de lo contrario asigna false *@
+            chkLunes.push(chkLunesInput ? chkLunesInput.checked : false);
+            chkMartes.push(chkMartesInput ? chkMartesInput.checked : false);
+            chkMiercoles.push(chkMiercolesInput ? chkMiercolesInput.checked : false);
+            chkJueves.push(chkJuevesInput ? chkJuevesInput.checked : false);
+            chkViernes.push(chkViernesInput ? chkViernesInput.checked : false);
+            chkSabado.push(chkSabadoInput ? chkSabadoInput.checked : false);
+            chkDomingo.push(chkDomingoInput ? chkDomingoInput.checked : false);
+
+            @* // Cerrado *@
+            const cerradoInput = group.querySelector(`input[name="Cerrado[${index}]"]`);
+            cerrado.push(cerradoInput ? cerradoInput.checked : false);
+        });
+
+        return {
+            HoraInicio: horaInicio,
+            HoraFin: horaFin,
+            chkLunes: chkLunes,
+            chkMartes: chkMartes,
+            chkMiercoles: chkMiercoles,
+            chkJueves: chkJueves,
+            chkViernes: chkViernes,
+            chkSabado: chkSabado,
+            chkDomingo: chkDomingo,
+            Cerrado: cerrado
+        };
+    }
+
+
+    function bloquearHorarios(hrInicioId, hrFinId, chkBox) {
+        @*  Obtener los inputs de hora de apertura y cierre *@
+        var horaInicio = document.getElementById(hrInicioId);
+        var horaFin = document.getElementById(hrFinId);
+
+        @*  Si el checkbox está marcado, se añade la propiedad readonly *@
+        if (chkBox.checked) {
+            horaInicio.setAttribute('readonly', true);
+            horaFin.setAttribute('readonly', true);
+        } else {
+            // Si se desmarca el checkbox, se quita la propiedad readonly
+            horaInicio.removeAttribute('readonly');
+            horaFin.removeAttribute('readonly');
+        }
+    }
+</script>
+
+

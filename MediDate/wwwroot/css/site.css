@@ -1,0 +1,71 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.ayudaLink{
+    text-decoration: none
+}
+
+.ayudaLink:hover {
+    text-decoration-line: underline 
+}
+
+.accordion-guia{
+    background-color: #712cd9;
+}
+
+.accordion-guia {
+    background-color: #712cd9;
+}
+
+.accordion-guia:hover {
+    background-color: #712cd9;
+    opacity: 0.75;
+}
+.accordion-guia:focus {
+    background-color: #712cd9;
+    border-color: mediumpurple;
+}
+
+/* Cuando el acordeón está abierto */
+.accordion-button:not(.collapsed) {
+    background-color: #712cd9 !important;
+}
+
+.accordion-guia-item:hover {
+    color: #343a40;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.text-purple{
+    color: #712cd9;
+}
+
+/* Estilo específico para el botón del acordeón cuando está abierto */
+#accordionGuiaUsuario4 .accordion-button:not(.collapsed) {
+    background-color: #ffffff !important; /* Fondo blanco */
+    color: #000000; /* Texto negro para contraste */
+    border-color: #ddd; /* Borde opcional */
+}
+
+/* Ajuste para el texto del acordeón */
+#accordionGuiaUsuario4 .accordion-button {
+    color: #712cd9; /* Color del texto cuando está cerrado */
+}
+

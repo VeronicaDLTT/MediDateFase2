@@ -1,0 +1,118 @@
+﻿@model IEnumerable<MediDate.Models.DetServicio>
+
+@{
+    ViewData["Title"] = "Servicios";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <!--Modal si la ejecución en la BD sale bien-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--Modal si ocurre una excepción-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--Modal si hay que mostrar información relevante al usuario-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuMedicos" />
+
+<div class="container">
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-auto align-self-center">
+            <h4>Servicios</h4>
+        </div>
+    </div>
+
+    <div><label></label></div>
+
+    <div class="row justify-content-end">
+        <div class="col p-1"></div>
+        <div class="col p-1"></div>
+        <div class="col p-1"></div>
+        <div class="col p-1">
+            <a class="btn btn-primary" asp-area="" asp-controller="DetServicio" asp-action="Create">Agregar</a>
+        </div>
+    </div>
+
+    @if (Model.Count() > 0)
+    {
+        <div class="row justify-content-center">
+            <div class="col-md-auto align-self-center">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+
+                                <th class="p-1" width="300">
+                                    @Html.DisplayNameFor(model => model.Servicio)
+                                </th>
+                                <th class="p-1" width="300">
+                                    @Html.DisplayNameFor(model => model.Costo)
+                                </th>
+                                <th class="p-1"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Servicio)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Costo)
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Editar", "Edit", new { IdDetServicio = item.IdDetServicio }, new{@class="nav-link text-white btn btn-primary", @style="display: inline-block; margin-right: 10px;"})
+                                        @Html.ActionLink("Eliminar", "Delete", new { IdDetServicio = item.IdDetServicio }, new{@class="nav-link text-white btn btn-danger", @style="display: inline-block;"})
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+                
+    }else{
+        <div class="row justify-content-center">
+            <div class="col-md-9 px-5 p-1 rounded-2">
+                <div class="card text-center">
+                    <div class="card-body">
+
+                        <p class="card-text fs-5">No cuenta con servicios registrados.</p>
+                        <i class="fa-solid fa-circle-exclamation fa-2xl" style="color: #712cf9;"></i>
+                        @* <img src="~/img/signo-de-exclamacion-en-un-circulo.png" alt="not_found"/> *@
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    </div>
+        </div> @*Fin Col de _MenuMedicos.cshtml*@
+    </div> @* Fin Row de _MenuMedicos.cshtml*@
+</div> @*Fin Container de _MenuMedicos.cshtml*@

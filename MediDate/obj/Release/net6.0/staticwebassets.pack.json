@@ -1,0 +1,741 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\obj\\Release\\net6.0\\scopedcss\\projectbundle\\MediDate.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MediDate.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\AccederHistorial\\dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\AccederHistorial\\dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\AccederHistorial\\uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\AccederHistorial\\uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\AgendarCita\\opcion_dos_dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\AgendarCita\\opcion_dos_dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\AgendarCita\\opcion_dos_tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\AgendarCita\\opcion_dos_tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\AgendarCita\\opcion_uno_cinco.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\AgendarCita\\opcion_uno_cinco.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\AgendarCita\\opcion_uno_cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\AgendarCita\\opcion_uno_cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\AgendarCita\\opcion_uno_dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\AgendarCita\\opcion_uno_dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\AgendarCita\\opcion_uno_tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\AgendarCita\\opcion_uno_tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\AgendarCita\\seis.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\AgendarCita\\seis.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\AgendarCita\\uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\AgendarCita\\uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\Busqueda\\dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\Busqueda\\dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\Busqueda\\uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\Busqueda\\uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\CambiarPassword\\cinco.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\CambiarPassword\\cinco.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\CambiarPassword\\cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\CambiarPassword\\cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\CambiarPassword\\dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\CambiarPassword\\dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\CambiarPassword\\seis.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\CambiarPassword\\seis.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\CambiarPassword\\tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\CambiarPassword\\tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\CambiarPassword\\uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\CambiarPassword\\uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\CancelarCita\\cinco.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\CancelarCita\\cinco.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\CancelarCita\\cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\CancelarCita\\cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\CancelarCita\\dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\CancelarCita\\dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\CancelarCita\\tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\CancelarCita\\tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\ConfiguracionCuenta\\cinco.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\ConfiguracionCuenta\\cinco.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\ConfiguracionCuenta\\cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\ConfiguracionCuenta\\cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\ConfiguracionCuenta\\dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\ConfiguracionCuenta\\dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\ConfiguracionCuenta\\tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\ConfiguracionCuenta\\tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\ConfiguracionCuenta\\uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\ConfiguracionCuenta\\uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\Horarios\\horarioatencion_dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\Horarios\\horarioatencion_dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\Horarios\\horarioatencion_uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\Horarios\\horarioatencion_uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\Horarios\\horariodisponible_uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\Horarios\\horariodisponible_uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\ReagendarCita\\cinco.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\ReagendarCita\\cinco.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\ReagendarCita\\cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\ReagendarCita\\cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\ReagendarCita\\dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\ReagendarCita\\dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\ReagendarCita\\seis.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\ReagendarCita\\seis.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\ReagendarCita\\tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\ReagendarCita\\tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\ReagendarCita\\uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\ReagendarCita\\uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\RegistrarseComoEspecialista\\dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\RegistrarseComoEspecialista\\dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\RegistrarseComoEspecialista\\tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\RegistrarseComoEspecialista\\tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\RegistrarseComoEspecialista\\uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\RegistrarseComoEspecialista\\uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\RegistrarseComoPaciente\\paso_dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\RegistrarseComoPaciente\\paso_dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\RegistrarseComoPaciente\\paso_tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\RegistrarseComoPaciente\\paso_tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\FAQ\\RegistrarseComoPaciente\\paso_uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\FAQ\\RegistrarseComoPaciente\\paso_uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\AgregarHorario\\cinco.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\AgregarHorario\\cinco.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\AgregarHorario\\cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\AgregarHorario\\cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\AgregarHorario\\dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\AgregarHorario\\dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\AgregarHorario\\seis.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\AgregarHorario\\seis.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\AgregarHorario\\tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\AgregarHorario\\tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\AgregarHorario\\uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\AgregarHorario\\uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Citas\\agendar_cinco.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Citas\\agendar_cinco.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Citas\\agendar_cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Citas\\agendar_cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Citas\\agendar_dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Citas\\agendar_dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Citas\\agendar_seis.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Citas\\agendar_seis.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Citas\\agendar_siete.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Citas\\agendar_siete.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Citas\\agendar_tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Citas\\agendar_tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Citas\\agendar_uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Citas\\agendar_uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Citas\\cancelar_cinco.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Citas\\cancelar_cinco.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Citas\\cancelar_cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Citas\\cancelar_cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Citas\\cancelar_dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Citas\\cancelar_dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Citas\\cancelar_tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Citas\\cancelar_tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Citas\\cancelar_uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Citas\\cancelar_uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Citas\\reagendar_cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Citas\\reagendar_cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Citas\\reagendar_dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Citas\\reagendar_dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Citas\\reagendar_tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Citas\\reagendar_tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Citas\\reagendar_uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Citas\\reagendar_uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\ConfCuenta\\editar_cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\ConfCuenta\\editar_cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\ConfCuenta\\editar_dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\ConfCuenta\\editar_dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\ConfCuenta\\editar_tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\ConfCuenta\\editar_tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\ConfCuenta\\editar_uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\ConfCuenta\\editar_uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Consultorio\\editar_cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Consultorio\\editar_cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Consultorio\\editar_dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Consultorio\\editar_dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Consultorio\\editar_tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Consultorio\\editar_tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Consultorio\\editar_uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Consultorio\\editar_uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\agregar_cinco.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\agregar_cinco.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\agregar_cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\agregar_cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\agregar_dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\agregar_dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\agregar_seis.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\agregar_seis.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\agregar_tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\agregar_tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\editar_cinco.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\editar_cinco.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\editar_cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\editar_cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\editar_dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\editar_dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\editar_seis.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\editar_seis.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\editar_tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\editar_tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\eliminar_cinco.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\eliminar_cinco.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\eliminar_cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\eliminar_cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\eliminar_tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\eliminar_tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\DiaCerrado\\uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\EstadosCita\\ausente.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\EstadosCita\\ausente.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\EstadosCita\\ausente_dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\EstadosCita\\ausente_dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\GenerarReceta\\dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\GenerarReceta\\dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\GenerarReceta\\tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\GenerarReceta\\tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\GenerarReceta\\uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\GenerarReceta\\uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Historial\\dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Historial\\dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Historial\\uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Historial\\uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Horario\\cinco.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Horario\\cinco.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Horario\\cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Horario\\cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Horario\\dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Horario\\dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Horario\\tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Horario\\tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Horario\\uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Horario\\uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Servicios\\agregarunservicio_cicno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Servicios\\agregarunservicio_cicno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Servicios\\agregarunservicio_cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Servicios\\agregarunservicio_cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Servicios\\agregarunservicio_dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Servicios\\agregarunservicio_dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Servicios\\agregarunservicio_tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Servicios\\agregarunservicio_tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Servicios\\agregarunservicio_uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Servicios\\agregarunservicio_uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Servicios\\dos.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Servicios\\dos.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Servicios\\editar_cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Servicios\\editar_cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Servicios\\editar_tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Servicios\\editar_tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Servicios\\eliminar_cinco.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Servicios\\eliminar_cinco.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Servicios\\eliminar_cuatro.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Servicios\\eliminar_cuatro.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Servicios\\eliminar_tres.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Servicios\\eliminar_tres.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\Servicios\\uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\Servicios\\uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\Documentacion\\GuiaUsuario\\validacion_uno.png",
+      "PackagePath": "staticwebassets\\img\\Documentacion\\GuiaUsuario\\validacion_uno.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\FAQ.png",
+      "PackagePath": "staticwebassets\\img\\FAQ.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\FAQ_menu.png",
+      "PackagePath": "staticwebassets\\img\\FAQ_menu.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\fondo_fondo.png",
+      "PackagePath": "staticwebassets\\img\\fondo_fondo.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\inicio_sesion.png",
+      "PackagePath": "staticwebassets\\img\\inicio_sesion.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\paciente.png",
+      "PackagePath": "staticwebassets\\img\\paciente.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\pregunta.png",
+      "PackagePath": "staticwebassets\\img\\pregunta.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\img\\signo-de-exclamacion-en-un-circulo.png",
+      "PackagePath": "staticwebassets\\img\\signo-de-exclamacion-en-un-circulo.png"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\UACH\\09 Noveno Semestre\\Proyectos Profesionales II\\Proyecto MediDate Fase 2\\MediDate\\MediDate\\wwwroot\\temp\\53a7c747-bbd2-4cca-9fd0-79230a06d153.pdf",
+      "PackagePath": "staticwebassets\\temp\\53a7c747-bbd2-4cca-9fd0-79230a06d153.pdf"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.MediDate.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.build.MediDate.props",
+      "PackagePath": "build\\MediDate.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.MediDate.props",
+      "PackagePath": "buildMultiTargeting\\MediDate.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildTransitive.MediDate.props",
+      "PackagePath": "buildTransitive\\MediDate.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

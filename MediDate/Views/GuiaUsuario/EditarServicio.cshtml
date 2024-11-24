@@ -1,0 +1,111 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuGuiaUsuario" />
+
+<div class="col-md-9 lh-lg">
+    <div class="card-header border-bottom border-primary pb-2 mb-4">
+        <h4 class="card-title text-center fw-normal">Editar Servicio</h4>
+    </div>
+
+    <div class="card-body">
+
+        <!-- Paso 1 -->
+        <h5 class="card-title">Paso 1: Acceder a la Sección de Servicios</h5>
+
+        <ul>
+            <li>
+                Inicia sesión en el sistema con las credenciales correspondientes.
+            </li>
+            <li>
+                Desde el menú principal, selecciona la opción Servicios.
+            </li>
+        </ul>
+
+        <p class="card-text">
+            Esto te llevará a una lista con todos los servicios que 
+            tienes registrados en el sistema.
+        </p>
+
+        <!-- Paso 2 -->
+        <h5 class="card-title">Paso 2: Seleccionar el Servicio a Editar</h5>
+
+        <ul>
+            <li>
+                Busca el servicio que deseas modificar en la lista.
+            </li>
+            <li>
+                Presiona el botón
+                <button class="btn btn-primary">Editar</button> 
+                asociado al servicio correspondiente.
+            </li>
+        </ul>
+
+        <p class="card-text">
+            Se abrirá un formulario prellenado con los datos actuales del servicio.
+        </p>
+
+        <!-- Paso 3 -->
+        <h5 class="card-title">Paso 3: Realizar Modificaciones</h5>
+
+        <p class="card-text">
+            En el formulario de edición, realiza los ajustes necesarios:
+        </p>
+
+        <ul>
+            <li>
+                <b>Servicio: </b>
+                Cambia el nombre del servicio si es necesario. Asegúrate de que sea 
+                claro y refleje adecuadamente lo que se ofrece.
+            </li>
+            <li>
+                <b>Costo: </b>
+                Modifica el precio del servicio si ha habido un cambio de tarifa.
+            </li>
+        </ul>
+
+        <!-- Paso 4 -->
+        <h5 class="card-title">Paso 4: Guardar los Cambios</h5>
+
+        <p class="card-text">
+            Una vez que hayas realizado todas las modificaciones, presiona el botón 
+            <button class="btn btn-primary">Guardar</button>
+        </p>
+        
+        <p class="card-text">
+            Si los datos son válidos, el sistema mostrará un mensaje de confirmación como:
+            "El servicio fue actualizado exitosamente."
+        </p>
+
+        <br /> <br />
+    </div>
+</div>
+    </div>
+</div>

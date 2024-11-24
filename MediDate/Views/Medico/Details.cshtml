@@ -1,0 +1,104 @@
+﻿@model MediDate.Models.Medico
+
+@{
+    ViewData["Title"] = "Configuración de la Cuenta";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <!--Información actualizada exitosamente-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar Editar Cuenta-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+<partial name="_MenuMedicos" />
+
+<div class="container">
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-auto align-self-center">
+            <h4>Configuración de la Cuenta</h4>
+        </div>
+    </div>
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-auto align-self-center">
+
+            <div class="card" style="width: 35rem;">
+                <div class="card-body">
+                    <div>
+                        <dl class="row">                       
+                            <dt class = "col-sm-6">
+                                @Html.DisplayNameFor(model => model.Nombre)
+                            </dt>
+                            <dd class = "col-sm-6">
+                                @Html.DisplayFor(model => model.Nombre)
+                            </dd>
+                            <dt class = "col-sm-6">
+                                @Html.DisplayNameFor(model => model.PrimerApellido)
+                            </dt>
+                            <dd class = "col-sm-6">
+                                @Html.DisplayFor(model => model.PrimerApellido)
+                            </dd>
+                            <dt class = "col-sm-6">
+                                @Html.DisplayNameFor(model => model.SegundoApellido)
+                            </dt>
+                            <dd class = "col-sm-6">
+                                @Html.DisplayFor(model => model.SegundoApellido)
+                            </dd>
+                            <dt class = "col-sm-6">
+                                @Html.DisplayNameFor(model => model.Especialidad)
+                            </dt>
+                            <dd class = "col-sm-6">
+                                @Html.DisplayFor(model => model.Especialidad)
+                            </dd>
+                            <dt class = "col-sm-6">
+                                @Html.DisplayName("No de Cédula")
+                            </dt>
+                            <dd class = "col-sm-6">
+                                @Html.DisplayFor(model => model.NumCedula)
+                            </dd>
+                            <dt class = "col-sm-6">
+                                @Html.DisplayName("Número de Celular")
+                            </dt>
+                            <dd class = "col-sm-6">
+                                @Html.DisplayFor(model => model.Telefono)
+                            </dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <div class="row d-flex justify-content-between">
+                            <div class="col-md-auto">
+                                <a class="btn btn-secondary" asp-controller="Cita" asp-action="IndexMedico">Ir a Mis Citas</a>
+                            </div>
+                            <div class="col-md-auto">
+                                <a class="btn btn-primary" asp-controller="Medico" asp-action="Edit">Editar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div> @*Fin Col de _MenuMedicos.cshtml*@
+    </div> @* Fin Row de _MenuMedicos.cshtml*@
+</div> @*Fin Container de _MenuMedicos.cshtml*@

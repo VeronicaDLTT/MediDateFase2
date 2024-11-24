@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <!--Cita agendada exitosamente-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--Modal si ocurre una excepción-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+        
+<partial name="_MenuAdministrador" />
+
+
+<div class="container">
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-auto align-self-center">
+            <h4>Bienvenido a MediDate usuario Administrador</h4>
+        </div>
+    </div>
+
+    <div><label></label></div>
+
+    <div class="text-center">
+        <img src="~/img/inicio_sesion.png" class="rounded" height="500px" alt="inicio_sesion">
+    </div>
+</div>
+        </div> @*Fin Col de _MenuAdministrador.cshtml*@
+    </div> @* Fin Row de _MenuAdministrador.cshtml*@
+</div> @*Fin Container de _MenuAdministrador.cshtml*@
+

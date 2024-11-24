@@ -1,0 +1,140 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuGuiaUsuario" />
+
+<div class="col-md-9 lh-lg">
+    <div class="card-header border-bottom border-primary pb-2 mb-4">
+        <h4 class="card-title text-center fw-normal">Lista de todas las Citas Médicas</h4>
+    </div>
+
+    <div class="card-body">
+
+        <p class="card-text">
+            El Historial de Citas Médicas es una herramienta integral que MediDate 
+            ofrece para gestionar y visualizar de forma organizada toda la información 
+            relacionada con las citas, tanto pasadas como futuras, en un solo lugar. 
+            Esta funcionalidad está diseñada para garantizar la transparencia, 
+            el seguimiento efectivo y la gestión óptima de la relación entre pacientes 
+            y especialistas.
+        </p>
+
+        <hr />
+
+        <!-- ¿Qué incluye el Historial de Citas Médicas? -->
+        <h5 class="card-title text-purple">¿Qué incluye el Historial de Citas Médicas?</h5>
+
+        <p class="card-text">
+            <b>Nombre del médico o profesional de la salud encargado de la cita: </b>
+        </p>
+
+        <ul>
+            <li>Nombre completo del especialista.</li>
+        </ul>
+
+        <p class="card-text">
+            <b>Detalles del Paciente: </b>
+        </p>
+
+        <ul>
+            <li>Nombre completo del paciente.</li>
+        </ul>
+
+        <p class="card-text">
+            <b>Fecha y Hora de las Citas: </b>
+        </p>
+
+        <ul>
+            <li>Registro claro de la fecha y hora en que se realizaron las citas anteriores.</li>
+            <li>Indicación de las citas futuras programadas para que tanto el paciente como el especialista puedan planificar.</li>
+        </ul>
+
+        <p class="card-text">
+            <b>Servicio: </b>
+        </p>
+
+        <ul>
+            <li>Nombre del servicio que se realiza en la cita médica.</li>
+        </ul>
+
+        <p class="card-text">
+            <b>Estado de las Citas: </b>
+        </p>
+
+        <ul>
+            <li>Estado actual de cada cita (por ejemplo, En espera, Finalizada, Cancelada, Ausente o Pendiente).</li>
+        </ul>
+
+        <p class="card-text">
+            <b>Indicación de si la cita generó una receta médica. </b>
+        </p>
+
+        <ul>
+            <li>Posibilidad de acceder directamente a la receta emitida, si está habilitada la funcionalidad.</li>
+        </ul>
+
+        <hr />
+
+        <h5 class="card-title text-purple">Acceso al Historial</h5>
+
+        <p class="card-text">
+            Para acceder al Historial debe dirigir a la sección de Historial de Citas Médicas
+            en el menú.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Historial/uno.png" width="300px" />
+            </div>
+        </div>
+
+        <br />
+
+        <p class="card-text">
+            Al ingresar aparecera la lista de todas las citas
+            que ha tenido y las citas agendadas en un futuro.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Historial/dos.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+    </div>
+</div>
+    </div>
+</div>
+

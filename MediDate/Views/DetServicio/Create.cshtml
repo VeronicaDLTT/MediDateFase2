@@ -1,0 +1,162 @@
+﻿@model MediDate.Models.DetServicio
+
+@{
+    ViewData["Title"] = "Agregar Servicio";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <!--Modal si la ejecución en la BD sale bien-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--Modal si ocurre una excepción-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--Modal si hay que mostrar información relevante al usuario-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<style>
+    #ddBusqueda {
+        position: absolute;
+        z-index: 9999;
+        background-color: white;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 900px;
+        box-sizing: border-box;
+    }
+</style>
+
+<partial name="_MenuMedicos" />
+
+<div class="container">
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-auto align-self-center">
+            <h4>Agregar Servicio</h4>
+        </div>
+    </div>
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-7 align-self-center">
+            <div class="card">
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label asp-for="Servicio" class="control-label"><b>Servicio</b></label>
+                                    <p>Selecciona una opcion de la lista o escribe en el recuadro sino encuentras la opción en la lista.</p>
+                                    <input id="txtServicio" asp-for="Servicio" class="form-control" type="text" placeholder="Servicio"/>
+                                    <select id="ddServicio" class="form-control" asp-for="IdServicio">
+                                        <option>-- Selecciona una opción --</option>
+                                        @foreach (var option in ViewBag.Servicios)
+                                        {
+                                            <option value="@option.Value">@option.Text</option>
+                                        }
+                                    </select>
+                                    @*<input id="txtBuscar" name="txtBuscar" onkeyup="getDropdownData()" type="text" class="form-control" placeholder="Nombre, Apellido, Correo" autocomplete="off">*@
+                                    @*<ul id="ddBusqueda" style="display:none;"></ul>*@
+
+                                    <span asp-validation-for="IdServicio" class="text-danger"></span>
+                                </div>
+                                <div><label></label></div>
+                                <div class="form-group">
+                                    <label asp-for="Costo" class="control-label"><b>Costo</b></label>
+                                    <input asp-for="Costo" class="form-control" placeholder="250"/>
+                                    <span asp-validation-for="Costo" class="text-danger"></span>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div><label></label></div>
+
+                        <div class="row justify-content-between">
+                            <div class="col-md-auto align-content-center">
+                                <a asp-controller="DetServicio" asp-action="Index" class="btn btn-secondary">Regresar</a>
+                            </div>
+                            <div class="col-md-auto">
+                                <input type="submit" value="Agregar" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div> @*Fin Col de _MenuMedicos.cshtml*@
+    </div> @* Fin Row de _MenuMedicos.cshtml*@
+</div> @*Fin Container de _MenuMedicos.cshtml*@
+
+<script>
+
+    @*Mostrar lista desplegable para el buscador*@
+    function getDropdownData() {
+        const txtBuscar = document.getElementById('txtBuscar').value;
+
+        $.ajax({
+            url: `/DetServicio/GetDropdownData?txtBuscar=${txtBuscar}`,
+            type: 'GET',
+            success: function (data) {
+
+
+                const dropdown = document.getElementById('ddBusqueda');
+
+                dropdown.innerHTML = '';
+
+                if (data.length === 0) {
+                    dropdown.style.display = 'none';
+                } else {
+
+                    data.forEach(item => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = item;
+                        listItem.classList = 'list-group-item list-group-item-action';
+                        listItem.addEventListener('click', function () {
+                            listItem.classList = 'list-group-item active';
+                            handleItemSelected(item);
+                            dropdown.style.display = 'none';
+                        });
+                        dropdown.appendChild(listItem);
+                    });
+
+                    dropdown.style.display = 'block';
+                }
+            }
+        });
+    }
+
+    @*Pone la opcion seleccionada de la lista desplegable en el input del buscador*@
+    function handleItemSelected(item) {
+        document.getElementById('txtBuscar').value = item;
+    }
+
+</script>
+

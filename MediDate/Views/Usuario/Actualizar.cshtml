@@ -1,0 +1,78 @@
+﻿@model MediDate.Models.Usuario
+
+@{
+    ViewData["Title"] = "Actualizar";
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--Modal Correo o Contraseña incorrecta-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<div class="container">
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-auto align-self-center">
+            <h4>Restablecer Contraseña</h4>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-4 align-self-center">
+
+            <hr />
+
+            <div><label></label></div>
+
+            <form asp-action="Actualizar">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                
+                <div><label></label></div>
+                <div class="form-group">
+                    <label class="control-label">Nueva Contraseña: </label>
+                    <input name="Pass1" id="inputPass1" class="form-control" type="password" required />
+                </div>
+                <div><label></label></div>
+                <div class="form-group">
+                    <label class="control-label">Repetir Contraseña: </label>
+                    <input name="Pass2" id="inputPass2" class="form-control" type="password" required />
+                </div>
+                <div><label></label></div>
+                <div class="row justify-content-center">
+                    <div class="col-md-auto align-self-center">
+                        <a onclick="mostrarOcultarPass()" href="#">Mostrar/Ocultar Contraseñas</a>
+                    </div>
+                </div>
+                <div><label></label></div>
+                <div class="form-group">
+                    <input type="submit" value="Actualizar" class="btn btn-primary" style="width:100%" />
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function mostrarOcultarPass() {
+
+        var passwordInput1 = document.getElementById("inputPass1");
+        var passwordInput2 = document.getElementById("inputPass2");
+
+        if (passwordInput1.type === "password" && passwordInput2.type === "password") {
+            passwordInput1.type = "text";
+            passwordInput2.type = "text";
+        } else {
+            passwordInput1.type = "password";
+            passwordInput2.type = "password";
+        }
+    }
+</script>
+

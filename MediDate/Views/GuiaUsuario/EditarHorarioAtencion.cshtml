@@ -1,0 +1,178 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuGuiaUsuario" />
+
+<div class="col-md-9 lh-lg">
+    <div class="card-header border-bottom border-primary pb-2 mb-4">
+        <h4 class="card-title text-center fw-normal">Editar Horario de Atención</h4>
+    </div>
+
+    <div class="card-body">
+
+        <p class="card-text">
+            Actualmente, el sistema permite editar los horarios de atención de un día 
+            existente modificando únicamente las horas de apertura y cierre, o marcando 
+            el día como cerrado. No es posible eliminar horarios específicos ni agregar 
+            más de un rango de atención en el mismo día.
+
+            A continuación, se detallan los pasos necesarios para editar un horario de 
+            atención:
+        </p>
+
+        <!-- Paso 1 -->
+        <h5 class="card-title">Paso 1: Acceder a la Sección de Horarios</h5>
+
+        <ul>
+            <li>
+                Inicia sesión en el sistema con tu Usuario y Contraseña.
+            </li>
+            <li>
+                Desde el menú principal, selecciona la opción Horario.
+            </li>
+        </ul>
+
+        <p class="card-text">
+            Esto te llevará a la pantalla donde se listan todos los horarios configurados
+            para los diferentes días de la semana.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Horario/uno.png" width="300px" />
+            </div>
+        </div>
+
+        <br />
+
+        <!-- Paso 2 -->
+        <h5 class="card-title">Paso 2: Abrir el Formulario para Editar Horarios</h5>
+
+        <ul>
+            <li>
+                Ubica el día que deseas modificar en la lista de horarios.
+            </li>
+            <li>
+                Presiona el botón 
+                
+                <button class="btn btn-primary">Editar</button>
+
+                correspondiente al horario que deseas ajustar.
+            </li>
+        </ul>
+
+        <p class="card-text">
+            Esto abrirá un formulario que mostrará los detalles actuales del horario, 
+            como la hora de apertura, hora de cierre y estado (Abierto o Cerrado).
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Horario/dos.png" width="800px" />
+            </div>
+        </div>
+
+        <br />
+
+        <!-- Paso 3 -->
+        <h5 class="card-title">Paso 3: Modificar el Horario de Atención</h5>
+
+        <p class="card-text">
+            En el formulario de edición, realiza los cambios necesarios según lo siguiente:
+        </p>
+
+        <ul>
+
+            <li>
+                <b>Modificar la Hora de Apertura: </b>
+                Ajusta el campo de Hora de Apertura con la nueva hora en la que iniciará la atención.
+                Asegúrate de que el nuevo valor sea anterior a la Hora de Cierre.
+            </li>
+            <li>
+                <b>Modificar la Hora de Cierre: </b>
+                Cambia el campo de Hora de Cierre con la nueva hora en la que finalizará la atención.
+                Verifica que la hora ingresada sea posterior a la Hora de Apertura.
+            </li>
+            <li>
+                <b>Indicar Día Cerrado: </b>
+                Si el día no tendrá atención, selecciona la opción Cerrado en el formulario.
+                Esto deshabilitará las horas de apertura y cierre, marcando el día como no laborable.
+            </li>
+        </ul>
+
+        <p class="card-text">
+            <b>Nota: </b>No se pueden agregar rangos de horarios adicionales dentro del 
+            mismo día ni eliminar horarios predefinidos.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Horario/tres.png" width="800px" />
+            </div>
+        </div>
+
+        <br />
+
+        <!-- Paso 4 -->
+        <h5 class="card-title">Paso 4: Guardar los Cambios Realizados</h5>
+
+        <p class="card-text">
+            Una vez que hayas realizado los ajustes necesarios, presiona el botón 
+            <button class="btn btn-primary">Guardar</button>
+            ubicado en la parte inferior del formulario.
+        </p>
+
+        <p class="card-text">Si los datos ingresados son válidos, el sistema confirmará 
+            la operación con un mensaje como: "¡Horario modificado exitosamente!"
+            Si hay errores en los datos ingresados (por ejemplo, la Hora de Cierre es 
+            anterior a la Hora de Apertura), el sistema mostrará un mensaje de error para 
+            que los corrijas antes de guardar.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Horario/cinco.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+    </div>
+</div>
+    </div>
+</div>
+

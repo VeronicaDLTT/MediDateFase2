@@ -1,0 +1,90 @@
+﻿@model MediDate.Models.DiaCerrado
+
+@{
+    ViewData["Title"] = "Agregar Dia Cerrado";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <!--Modal si la ejecución en la BD sale bien-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--Modal si ocurre una excepción-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--Modal si hay que mostrar información relevante al usuario-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuMedicos" />
+
+<div class="container">
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-auto align-self-center">
+            <h4>Agregar Dia Cerrado</h4>
+        </div>
+    </div>
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-7 align-self-center">
+            <div class="card">
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <label class="control-label">Si es sólo un día solo llene el primer campo de fecha, si es un rango de fechas llene los dos campos de fecha.</label>
+                        <div><label></label></div>
+                        <div class="form-group">
+                            <label class="control-label"><b>Del día</b></label>
+                            <input asp-for="Fecha1" class="form-control" type="date" min="@DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")" />
+                            <span asp-validation-for="Fecha1" class="text-danger"></span>
+                        </div>
+                        <div><label></label></div>
+                        <div class="form-group">
+                            <label class="control-label"><b>Al día</b></label>
+                            <input asp-for="Fecha2" class="form-control" type="date" min="@DateTime.Now.AddDays(1).ToString("yyyy-MM-dd")" />
+                        </div>
+                        <div><label></label></div>
+                        <div class="row justify-content-between">
+                            <div class="col-md-auto">
+                                <a class="btn btn-secondary" asp-action="Index" asp-controller="DiaCerrado">Regresar</a>
+                            </div>
+                            <div class="col-md-auto">
+                                <input type="submit" value="Guardar" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        </div> @*Fin Col de _MenuMedicos.cshtml*@
+    </div> @* Fin Row de _MenuMedicos.cshtml*@
+</div> @*Fin Container de _MenuMedicos.cshtml*@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

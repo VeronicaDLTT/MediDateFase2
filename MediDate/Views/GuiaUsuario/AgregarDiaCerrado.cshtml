@@ -1,0 +1,196 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuGuiaUsuario" />
+
+<div class="col-md-9 lh-lg">
+    <div class="card-header border-bottom border-primary pb-2 mb-4">
+        <h4 class="card-title text-center fw-normal">Agregar Día Cerrado</h4>
+    </div>
+
+    <div class="card-body">
+
+        <p class="card-text">
+            La funcionalidad de Días Cerrados permite a los usuarios gestionar días 
+            inhábiles o periodos de vacaciones en los que no se podrán agendar citas. 
+            Estos días se reflejan automáticamente en la disponibilidad de horarios, 
+            garantizando que no se asignen citas en las fechas marcadas como no laborables.
+            <br />
+            A continuación, se detalla el proceso paso a paso para agregar un día cerrado 
+            en el sistema:
+        </p>
+
+        <!-- Paso 1 -->
+        <h5 class="card-title">Paso 1: Acceder a la Sección de Horario</h5>
+
+        <ul>
+            <li>
+                Inicia sesión en el sistema con tu Usuario y Contraseña.
+            </li>
+            <li>
+                Desde el menú principal, selecciona la opción Horario.
+            </li>
+        </ul>
+
+        <p class="card-text">
+            Esto te llevará a la pantalla donde se gestiona la configuración 
+            de horarios y días cerrados.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Horario/uno.png" width="300px" />
+            </div>
+        </div>
+
+        <br />
+
+        <!-- Paso 2 -->
+        <h5 class="card-title">Paso 2: Navegar a la Sección de Días Cerrados</h5>
+
+        <ul>
+            <li>
+                Dentro de la sección de Horario, localiza y presiona el botón
+                <button class="btn btn-secondary">Días Cerrados</button>.
+            </li>
+        </ul>
+
+        <p class="card-text">
+            Esto abrirá una pantalla específica donde puedes visualizar, 
+            agregar o administrar los días cerrados existentes.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Horario/dos.png" width="800px" />
+            </div>
+        </div>
+
+        <br />
+
+        <!-- Paso 3 -->
+        <h5 class="card-title">Paso 3: Abrir el Formulario para Agregar un Día Cerrado</h5>
+
+        <p class="card-text">
+            En la pantalla de Días Cerrados, presiona el botón
+            <button class="btn btn-primary">Agregar</button>.
+            <br />
+            Aparecerá un formulario que permite ingresar la información necesaria 
+            para registrar un nuevo día o periodo cerrado.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/DiaCerrado/agregar_dos.png" width="800px" />
+            </div>
+        </div>
+
+        <br />
+
+        <!-- Paso 4 -->
+        <h5 class="card-title">Paso 4: Llenar los Campos del Formulario</h5>
+
+        <p class="card-text">
+            En el formulario, completa los siguientes campos según el tipo de 
+            día cerrado que deseas agregar:
+        </p>
+
+        <p class="card-text fw-bold">Agregar un Solo Día Cerrado:</p>
+
+        <ul>
+            <li>
+                Ingresa la fecha específica en el campo <b>Del día</b> 
+                (por ejemplo, 2024-12-25 para Navidad).
+            </li>
+        </ul>
+
+        <p class="card-text">
+            Este campo es obligatorio y define un único día no laborable.
+        </p>
+        
+        <p class="card-text fw-bold">
+            Agregar un Periodo de Vacaciones (Opcional):
+        </p>
+
+        <p class="card-text">
+            Si deseas marcar varios días consecutivos como cerrados 
+            (por ejemplo, un periodo de vacaciones), llena los campos 
+            <b>Del día</b> y <b>Al día</b>.
+        </p>
+
+        <p class="card-text">
+            <b>Nota: </b>
+            Si solo deseas agregar un día específico, no es necesario llenar
+            el campo de Al día.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/DiaCerrado/agregar_tres.png" width="800px" />
+            </div>
+        </div>
+
+        <br />
+
+        <!-- Paso 5 -->
+        <h5 class="card-title">Paso 5: Guardar el Día Cerrado</h5>
+
+        <p class="card-text">
+            Una vez que hayas completado los campos requeridos, presiona el botón
+            <button class="btn btn-primary">Agregar</button>
+            para guardar los cambios.
+            <br />
+            Si todo se registra correctamente, el sistema mostrará un mensaje de confirmación, por ejemplo:
+            "¡Día cerrado registrado exitosamente!"
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/DiaCerrado/agregar_seis.png" width="800px" />
+            </div>
+        </div>
+
+        <br />
+
+        <br /> <br />
+    </div>
+</div>
+    </div>
+</div>

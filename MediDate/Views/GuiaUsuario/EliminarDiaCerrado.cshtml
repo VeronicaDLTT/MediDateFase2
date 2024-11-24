@@ -1,0 +1,174 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuGuiaUsuario" />
+
+<div class="col-md-9 lh-lg">
+    <div class="card-header border-bottom border-primary pb-2 mb-4">
+        <h4 class="card-title text-center fw-normal">Eliminar Día Cerrado</h4>
+    </div>
+
+    <div class="card-body">
+
+        <p class="card-text">
+            La eliminación permite borrar un registro de día cerrado cuando 
+            ya no es necesario, por ejemplo, si se reanuda la atención en un 
+            día previamente marcado como inhábil.
+        </p>
+
+        <!-- Paso 1 -->
+        <h5 class="card-title">Paso 1: Acceder a la Sección de Horario</h5>
+
+        <ul>
+            <li>
+                Inicia sesión en el sistema con tu Correo y Contraseña.
+            </li>
+            <li>
+                Dirígete al menú principal y selecciona la opción Horario.
+            </li>
+        </ul>
+
+        <p class="card-text">
+            Esto te llevará a la pantalla donde se gestiona la configuración 
+            de horarios y días cerrados.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Horario/uno.png" width="300px" />
+            </div>
+        </div>
+
+        <br />
+
+        <!-- Paso 2 -->
+        <h5 class="card-title">Paso 2: Navegar a la Sección de Días Cerrados</h5>
+
+        <ul>
+            <li>
+                Dentro de la sección de Horario, localiza y presiona el botón
+                <button class="btn btn-secondary">Días Cerrados</button>.
+            </li>
+        </ul>
+
+        <p class="card-text">
+            Esto abrirá una pantalla específica donde puedes visualizar, 
+            agregar o administrar los días cerrados existentes.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Horario/dos.png" width="800px" />
+            </div>
+        </div>
+
+        <br />
+
+        <!-- Paso 3 -->
+        <h5 class="card-title">Paso 3: Seleccionar el Día a Eliminar</h5>
+
+        <p class="card-text">
+            En la lista de días cerrados, identifica el registro que deseas eliminar.
+            Presiona el botón 
+            <button class="btn btn-danger">Eliminar</button> correspondiente a ese registro.
+            <br />
+            Esto abrirá un formulario prellenado con la información actual del día cerrado.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/DiaCerrado/editar_tres.png" width="800px" />
+            </div>
+        </div>
+
+        <br />
+
+        <!-- Paso 4 -->
+        <h5 class="card-title">Paso 4: Continuar con la eliminación del Día Cerrado</h5>
+
+        <p class="card-text">
+            Dentro de la sección de Eliminar Días Cerrados presiona el botón
+            <button class="btn btn-primary">Eliminar</button> .
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/DiaCerrado/eliminar_tres.png" width="800px" />
+            </div>
+        </div>
+
+        <br />
+
+        <!-- Paso 5 -->
+        <h5 class="card-title">Paso 5: Confirmar la Eliminación</h5>
+
+        <p class="card-text">
+            Aparecerá un mensaje de confirmación, como:
+            "¿Desea eliminar el día cerrado definitivamente?"
+            Si estás seguro, presiona el botón 
+             <button class="btn btn-danger">Eliminar</button> para proceder con la eliminación.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/DiaCerrado/eliminar_cuatro.png" width="800px" />
+            </div>
+        </div>
+
+        <br />
+        
+        <p class="card-text">
+            Una vez completado, el sistema mostrará un mensaje como:
+            "¡Día cerrado eliminado exitosamente!"
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/DiaCerrado/eliminar_cinco.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+    </div>
+</div>
+    </div>
+</div>

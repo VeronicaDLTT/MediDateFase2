@@ -1,0 +1,143 @@
+﻿@model MediDate.Models.Medico
+
+@{
+    ViewData["Title"] = "Crear cuenta";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <!--Modal si la ejecución en la BD sale bien-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--Modal si ocurre una excepción-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--Modal si hay que mostrar información relevante al usuario-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<div class="container">
+    
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-auto align-self-center">
+            <h4>Crear cuenta</h4>
+        </div>
+    </div>
+
+    <hr />
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-7 align-self-center">
+            <div class="card">
+                <div class="card-body">
+                    <form asp-action="Create" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="control-label fw-bold">Correo</label>
+                                    <input name="Email" type="email" placeholder="correo@ejemplo.com" class="form-control" required/>
+                                    
+                                    <div><label></label></div>
+
+                                    <label class="control-label fw-bold">Contraseña</label>
+                                    <input name="Pass" type="password" placeholder="Contraseña" class="form-control" required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div><label></label></div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label asp-for="Nombre" class="control-label fw-bold"></label>
+                                    <input asp-for="Nombre" class="form-control" placeholder="Nombre" required/>
+                                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label asp-for="PrimerApellido" class="control-label fw-bold"></label>
+                                    <input asp-for="PrimerApellido" class="form-control" placeholder="Primer Apellido" required/>
+                                    <span asp-validation-for="PrimerApellido" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label asp-for="SegundoApellido" class="control-label fw-bold"></label>
+                                    <input asp-for="SegundoApellido" class="form-control" placeholder="Segundo Apellido"/>
+                                    <span asp-validation-for="SegundoApellido" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div><label></label></div>
+
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-group">
+                                    <label asp-for="IdEspecialidad" class="control-label fw-bold">Especialidad</label>
+                                    <select asp-for="IdEspecialidad" asp-items="@ViewBag.IdEspecialidad" class="form-control"> </select>
+                                    <span asp-validation-for="IdEspecialidad" class="text-danger"></span>
+                                </div>
+
+                                <div><label></label></div>
+
+                                <div class="form-group">
+                                    <label asp-for="NumCedula" class="control-label fw-bold"></label>
+                                    <input asp-for="NumCedula" class="form-control" placeholder="1234567" required />
+                                    <span asp-validation-for="NumCedula" class="text-danger"></span>
+                                </div>
+                                <div><label></label></div>
+                                <div class="form-group">
+                                    <label asp-for="Telefono" class="control-label fw-bold"></label>
+                                    <input asp-for="Telefono" class="form-control" pattern="[0-9]{10}" maxlength="10" placeholder="999999999" type="text" />
+                                    <span asp-validation-for="Telefono" class="text-danger"></span>
+                                </div>
+                                <div><label></label></div>
+                                <div class="form-group">
+                                    <label class="control-label fw-bold">Cédula Profesional</label>
+                                    <input class="form-control" type="file" id="archivo" name="archivo">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div><label></label></div>
+
+                        <div class="row justify-content-between">
+                            <div class="col-md-auto">
+                                <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Regresar</a>
+                            </div>
+                            <div class="col-md-auto">
+                                <input type="submit" value="Continuar" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

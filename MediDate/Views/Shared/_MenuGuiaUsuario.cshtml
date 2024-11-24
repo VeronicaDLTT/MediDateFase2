@@ -1,0 +1,208 @@
+﻿<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container">
+        <div class="row justify-content-center" style="width:100%;">
+            <div class="col-md-auto">
+                <h3><a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link">MediDate</a></h3>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-3 border-1 border-end">
+            <h4>Guía de Usuario</h4>
+
+            <div><label></label></div>
+
+            <!-- Inicio -->
+            <div class="accordion accordion-flush" id="accordionGuiaUsuario">
+                <div class="accordion-item">
+                    <h2>
+                        <button class="accordion-button collapsed accordion-guia" type="button" >
+                            <a asp-action="Index" asp-controller="GuiaUsuario" class="nav-link p-2 text-white fw-bold">Inicio</a>
+                        </button>
+                    </h2>
+                </div>
+            </div>
+
+            <!-- Primeros pasos -->
+            <div class="accordion accordion-flush" id="accordionGuiaUsuario">
+                <div class="accordion-item">
+                    <h2>
+                        <button class="accordion-button collapsed text-white accordion-guia" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <b>Primeros pasos</b>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionGuiaUsuario">
+
+                        <div class="accordion-body">
+                            <div class="list-group list-group-flush">
+                                <a asp-action="AgregarHorarioAtencion" asp-controller="GuiaUsuario" class="list-group-item accordion-guia-item p-3">Agregar Horario de Atencion</a>
+                                <a asp-action="AgregarPrimerServicio" asp-controller="GuiaUsuario" class="list-group-item accordion-guia-item p-3">Agregar el Primer Servicio</a>
+                                <a asp-action="ValidacionCuenta" asp-controller="GuiaUsuario" class="list-group-item accordion-guia-item p-3">Validación de la Cuenta</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mis Citas -->
+            <div class="accordion accordion-flush" id="accordionGuiaUsuario1">
+                <div class="accordion-item">
+                    <h2 class="text-white">
+                        <button class="accordion-button collapsed text-white accordion-guia" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <b>Mis Citas</b>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionGuiaUsuario1">
+
+                        <div class="accordion-body">
+                            <div class="list-group list-group-flush">
+                                <a asp-action="AgendarCita" asp-controller="GuiaUsuario" class="list-group-item accordion-guia-item p-3">Agendar una Cita</a>
+                                <a asp-action="ReagendarCita" asp-controller="GuiaUsuario" class="list-group-item accordion-guia-item p-3">Reagendar una Cita</a>
+                                <a asp-action="CancelarCita" asp-controller="GuiaUsuario" class="list-group-item accordion-guia-item p-3">Cancelar una Cita</a>
+                                <a asp-action="GenerarReceta" asp-controller="GuiaUsuario" class="list-group-item accordion-guia-item p-3">Generar una Receta Médica</a>
+                                <a asp-action="EstadosCita" asp-controller="GuiaUsuario" class="list-group-item accordion-guia-item p-3">Estados de las Citas</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Historial de Citas Médicas -->
+            <div class="accordion accordion-flush" id="accordionGuiaUsuario2">
+                <div class="accordion-item">
+                    <h2 class="text-white">
+                        <button class="accordion-button collapsed text-white accordion-guia" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <b>Historial de Citas Médicas</b>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionGuiaUsuario2">
+
+                        <div class="accordion-body">
+                            <div class="list-group list-group-flush">
+                                <a asp-action="ListaHistorial" asp-controller="GuiaUsuario" class="list-group-item accordion-guia-item p-3">Lista de todas las Citas Médicas</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Horario -->
+            <div class="accordion accordion-flush" id="accordionGuiaUsuario3">
+                <div class="accordion-item">
+                    <h2 class="text-white">
+                        <button class="accordion-button collapsed text-white accordion-guia" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                            <b>Horario</b>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionGuiaUsuario3">
+
+                        <div class="accordion-body">
+                            <div class="list-group list-group-flush">
+                                <a asp-action="EditarHorarioAtencion" asp-controller="GuiaUsuario" class="list-group-item accordion-guia-item p-3">Editar Horario de Atención</a>
+                            </div>
+                        </div>
+
+                        <!-- Día Cerrado -->
+                        <div class="accordion accordion-flush" id="accordionGuiaUsuario4">
+                            <div class="accordion-item">
+                                <h2 class="text-white">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                                        <b>Dia Cerrado</b>
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionGuiaUsuario4">
+
+                                    <div class="accordion-body">
+                                        <div class="list-group list-group-flush">
+                                            <a asp-action="AgregarDiaCerrado" asp-controller="GuiaUsuario" class="list-group-item accordion-guia-item p-3">Agregar Día Cerrado</a>
+                                        </div>
+                                        <div class="list-group list-group-flush">
+                                            <a asp-action="EditarDiaCerrado" asp-controller="GuiaUsuario" class="list-group-item accordion-guia-item p-3">Editar Día Cerrado</a>
+                                        </div>
+                                        <div class="list-group list-group-flush">
+                                            <a asp-action="EliminarDiaCerrado" asp-controller="GuiaUsuario" class="list-group-item accordion-guia-item p-3">Eliminar Día Cerrado</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Servicios -->
+            <div class="accordion accordion-flush" id="accordionGuiaUsuario5">
+                <div class="accordion-item">
+                    <h2 class="text-white">
+                        <button class="accordion-button collapsed text-white accordion-guia" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                            <b>Servicios</b>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionGuiaUsuario5">
+
+                        <div class="accordion-body">
+                            
+                            <div class="list-group list-group-flush">
+                                <a asp-action="EditarServicio" asp-controller="GuiaUsuario" class="list-group-item accordion-guia-item p-3">Editar Servicio</a>
+                            </div>
+                            <div class="list-group list-group-flush">
+                                <a asp-action="EliminarServicio" asp-controller="GuiaUsuario" class="list-group-item accordion-guia-item p-3">Eliminar Servicio</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Consultorio -->
+            <div class="accordion accordion-flush" id="accordionGuiaUsuario6">
+                <div class="accordion-item">
+                    <h2 class="text-white">
+                        <button class="accordion-button collapsed text-white accordion-guia" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                            <b>Consultorio</b>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionGuiaUsuario6">
+
+                        <div class="accordion-body">
+                            <div class="list-group list-group-flush">
+                                <a asp-action="EditarConsultorio" asp-controller="GuiaUsuario" class="list-group-item accordion-guia-item p-3">Editar Consultorio</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Configuración de la Cuenta -->
+            <div class="accordion accordion-flush" id="accordionGuiaUsuario7">
+                <div class="accordion-item">
+                    <h2 class="text-white">
+                        <button class="accordion-button collapsed text-white accordion-guia" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                            <b>Configuración de la Cuenta</b>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionGuiaUsuario2">
+
+                        <div class="accordion-body">
+                            <div class="list-group list-group-flush">
+                                <a asp-action="EditarCuenta" asp-controller="GuiaUsuario" class="list-group-item accordion-guia-item p-3">Editar Configuración de la Cuenta</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>

@@ -1,0 +1,126 @@
+﻿@model MediDate.Models.Paciente
+
+@{
+    ViewData["Title"] = "Crear cuenta";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <!--Modal si la ejecución en la BD sale bien-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--Modal si ocurre una excepción-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--Modal si hay que mostrar información relevante al usuario-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<div class="container">
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-auto align-self-center">
+            <h4>Crear cuenta</h4>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row justify-content-center">
+        <div class="col-md-7 align-self-center">
+            <div class="card">
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="control-label fw-bold">Correo</label>
+                                    <input name="Email" type="email" placeholder="correo@ejemplo.com" class="form-control" required />
+                                    
+                                    <div><label></label></div>
+
+                                    <label class="control-label fw-bold">Contraseña</label>
+                                    <input name="Pass" type="password" placeholder="Contraseña" class="form-control" required />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div><label></label></div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label asp-for="Nombre" class="control-label fw-bold"></label>
+                                    <input asp-for="Nombre" class="form-control" placeholder="Nombre" required/>
+                                    <span asp-validation-for="Nombre" class="text-danger"></span>
+                                </div>
+
+                                <div><label></label></div>
+
+                                <div class="form-group">
+                                    <label asp-for="Apellido" class="control-label fw-bold"></label>
+                                    <input asp-for="Apellido" class="form-control" placeholder="Apellido" required/>
+                                    <span asp-validation-for="Apellido" class="text-danger"></span>
+                                </div>
+
+                                <div><label></label></div>
+
+                                <div class="form-group">
+                                    <label asp-for="FechaNacimiento" class="control-label fw-bold"></label>
+                                    <input asp-for="FechaNacimiento" class="form-control" type="date"/>
+                                    <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+                                </div>
+
+                                <div><label></label></div>
+
+                                <div class="form-group">
+                                    <label asp-for="Telefono" class="control-label fw-bold"></label>
+                                    <img data-bs-toggle="tooltip" data-bs-placement="top" title="El Número de Celular se emplea para enviar información acerca de las citas médicas." src="~/img/pregunta.png" width="20px" />
+                                    <input asp-for="Telefono" class="form-control" pattern="[0-9]{10}" maxlength="10" placeholder="999999999" type="text" />
+                                    <span asp-validation-for="Telefono" class="text-danger"></span>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div><label></label></div>
+
+                        <div class="row justify-content-between">
+                            <div class="col-md-auto">
+                                <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Regresar</a>
+                            </div>
+                            <div class="col-md-auto">
+                                <input type="submit" value="Crear cuenta" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

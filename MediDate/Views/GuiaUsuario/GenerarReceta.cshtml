@@ -1,0 +1,140 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuGuiaUsuario" />
+
+<div class="col-md-9">
+    <div class="card-header border-bottom border-primary pb-2 mb-4">
+        <h4 class="card-title text-center fw-normal">Generar Receta Médica</h4>
+    </div>
+
+    <div class="card-body">
+
+        <h5 class="card-title">Paso 1. Ingresar a Mis Citas</h5>
+
+        <p class="card-text">
+            Dirigete a la sección Mis Citas del Menú.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Citas/agendar_uno.png" width="300px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+        <h5 class="card-title">Paso 2. Seleccionar Cita para Generar Receta</h5>
+
+        <p class="card-text">
+            En la opción Por día o Por semana presiona sobre cualquier cita para ver los Detalles.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Citas/reagendar_uno.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+        <h5 class="card-title">Paso 3. Ingresar a Formulario Generar Receta Médica</h5>
+
+        <p class="card-text">
+            En los Detalles de la Cita presiona el botón <button type="button" class="text-black btn btn-outline-success">Receta</button> .
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Citas/reagendar_dos.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+        <h5 class="card-title">Paso 4. Llenar Formulario</h5>
+
+        <p class="card-text">
+            En el Formulario Generar Receta Médica llena los siguientes campos, de ser necesario,
+            si no, puedes dejar vacios los campos
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/GenerarReceta/uno.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+        <h5 class="card-title">Paso 5. Generar Receta</h5>
+
+        <p class="card-text">
+            Despues de ingresar todos los datos necesarios, presiona el botón 
+            <button type="button" class="btn btn-primary">Generar Receta</button>, al final del formulario.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/GenerarReceta/dos.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+        <p class="card-text">
+            Si todo salio correctamente, aparecerá un mensaje indicando que Receta se genero de manera exitosa,
+            además se descargara el archivo PDF de la Receta Médica.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/GenerarReceta/tres.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+    </div>
+</div>
+    </div>
+</div>

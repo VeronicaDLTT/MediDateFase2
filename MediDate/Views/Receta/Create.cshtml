@@ -1,0 +1,235 @@
+﻿@model MediDate.Models.Receta
+
+@{
+    ViewData["Title"] = "Create";
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["InfoMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["InfoMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuMedicos" />
+
+<div class="container">
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-auto align-self-center">
+            <h4>Generar Receta Médica</h4>
+        </div>
+    </div>
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-12 align-self-center">
+            <div class="card">
+                <div class="card-body">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <input asp-for="IdCita" class="form-control" value="@ViewBag.IdCita" hidden />
+
+                        @* Apartado Médico *@
+                        <div class="row justify-content-center">
+                            <div class="col-md-auto align-self-center">
+                                <h3>Dr. @ViewBag.NombreMedico</h3>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-auto align-self-center">
+                                <label>@ViewBag.Especialidad</label>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-auto align-self-center">
+                                <label>Cédula Profesional: @ViewBag.NumCedula</label>
+                            </div>
+                        </div>
+
+                        <div><label></label></div>
+
+                        @* Apartado Consultorio *@
+                        <div class="row justify-content-center">
+                            <div class="col-md-auto align-self-center">
+                                <label><b>@ViewBag.NombreConsultorio</b></label>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <div class="col-md-auto align-self-center">
+                                <label><b>@ViewBag.DireccionConsultorio</b></label>
+                            </div>
+                        </div>
+
+                        <div><label></label></div>
+
+                        @* Fecha y hora *@
+                        <div class="row justify-content-start">
+                            <div class="col-md-auto">
+                                <label class="control-label"><b>Fecha</b></label>
+                            </div>
+                            <div class="col-md-auto">
+                                <input asp-for="Fecha" class="form-control" type="date" value="@DateTime.Now.ToString("yyyy-MM-dd")" readonly/>
+                            </div>
+                            <div class="col-md-auto">
+                                <label class="control-label"><b>Hora</b></label>
+                            </div>
+                            <div class="col-md-auto">
+                                <input asp-for="Hora" class="form-control" type="time" value="@DateTime.Now.ToString("HH:mm")" readonly/>
+                            </div>
+                        </div>
+
+                        <div><label></label></div>
+
+                        <div class="row justify-content-start">
+                            <div class="col-md-auto">
+                                <label><b>Paciente: </b></label>
+                            </div>
+
+                            <div class="col-md-8 border-bottom" style="border-bottom-width: 1px !important; border-bottom-color: #000000 !important;">
+                                <label >@ViewBag.NombrePaciente</label>
+                            </div>
+
+                            <div class="col-md-auto align-self-center">
+                                <label><b>Edad: </b></label>
+                            </div>
+
+                            <div class="col-md-2 border-bottom" style="border-bottom-width: 1px !important; border-bottom-color: #000000 !important;">
+                                <label >@ViewBag.Edad</label>
+                            </div>
+                        </div>
+
+                        <div><label></label></div>
+
+                        <div class="row justify-content-start">
+                            <div class="col-md-3 align-self-center">
+                                <div class="form-group">
+                                    <label asp-for="Peso" class="control-label fw-bold"></label>
+                                    <input asp-for="Peso" class="form-control" maxlength="10"/>
+                                    <span asp-validation-for="Peso" class="text-danger"></span>
+                                </div>
+                                <div><label></label></div>
+                                <div class="form-group">
+                                    <label asp-for="Talla" class="control-label fw-bold"></label>
+                                    <input asp-for="Talla" class="form-control" maxlength="10" />
+                                    <span asp-validation-for="Talla" class="text-danger"></span>
+                                </div>
+                                <div><label></label></div>
+                                <div class="form-group">
+                                    <label asp-for="Temperatura" class="control-label fw-bold"></label>
+                                    <input asp-for="Temperatura" class="form-control" maxlength="10" />
+                                    <span asp-validation-for="Temperatura" class="text-danger"></span>
+                                </div>
+                                <div><label></label></div>
+                                <div class="form-group">
+                                    <label asp-for="TA" class="control-label fw-bold"></label>
+                                    <input asp-for="TA" class="form-control" />
+                                    <span asp-validation-for="TA" class="text-danger"></span>
+                                </div>
+                                <div><label></label></div>
+                                <div class="form-group">
+                                    <label asp-for="FC" class="control-label fw-bold"></label>
+                                    <input asp-for="FC" class="form-control" />
+                                    <span asp-validation-for="FC" class="text-danger"></span>
+                                </div>
+                                <div><label></label></div>
+                                <div class="form-group">
+                                    <label asp-for="FR" class="control-label fw-bold"></label>
+                                    <input asp-for="FR" class="form-control" />
+                                    <span asp-validation-for="FR" class="text-danger"></span>
+                                </div>
+                                <div><label></label></div>
+                                <div class="form-group">
+                                    <label asp-for="Saturacion" class="control-label fw-bold"></label>
+                                    <input asp-for="Saturacion" class="form-control" />
+                                    <span asp-validation-for="Saturacion" class="text-danger"></span>
+                                </div>
+                                <div><label></label></div>
+                                <div class="form-group">
+                                    <label asp-for="Alergias" class="control-label fw-bold"></label>
+                                    <textarea asp-for="Alergias" class="form-control"></textarea>
+                                    <span asp-validation-for="Alergias" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-9">
+                                <div class="form-group">
+                                    <label asp-for="Diagnostico" class="control-label fw-bold"></label>
+                                    <textarea asp-for="Diagnostico" class="form-control" rows="5"></textarea>
+                                    <span asp-validation-for="Diagnostico" class="text-danger"></span>
+                                </div>
+                                <div><label></label></div>
+                                <div class="form-group">
+                                    <label asp-for="Tratamiento" class="control-label fw-bold"></label>
+                                    <textarea asp-for="Tratamiento" class="form-control" rows="5"></textarea>
+                                    <span asp-validation-for="Tratamiento" class="text-danger"></span>
+                                </div>
+                                <div><label></label></div>
+                                <div class="form-group">
+                                    <label asp-for="Observaciones" class="control-label fw-bold"></label>
+                                    <textarea asp-for="Observaciones" class="form-control" rows="5"></textarea>
+                                    <span asp-validation-for="Observaciones" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div><label></label></div>
+                        
+                        <div class="row justify-content-between">
+                            <div class="col-md-auto">
+                                <a class="nav-link text-black" asp-action="Index" asp-controller="Medico">Ir a Inicio</a>
+                            </div>
+                            <div class="col-md-auto">
+                                <input id="generarReceta" name="generarReceta" type="submit" value="Generar Receta" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </div> @*Fin Col de _MenuMedicos.cshtml*@
+    </div> @* Fin Row de _MenuMedicos.cshtml*@
+</div> @*Fin Container de _MenuMedicos.cshtml*@
+
+<script>
+    document.getElementById("generarReceta").onclick = function () {
+        
+        setTimeout(function () {
+            window.location.href = '@Url.Action("Historial", "Cita")';
+        }, 3000); // Ajusta el tiempo según sea necesario
+    };
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,159 @@
+﻿@if (TempData["SuccessMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--No se pueden cargar las citas-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuGuiaUsuario" />
+
+<div class="col-md-9">
+    <div class="card-header border-bottom border-primary pb-2 mb-4">
+        <h4 class="card-title text-center fw-normal">Agendar una Cita</h4>
+    </div>
+
+    <div class="card-body">
+        
+        <h5 class="card-title">Paso 1. Ingresar a Mis Citas</h5>
+
+        <p class="card-text">
+            Dirigete a la sección Mis Citas del Menú.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Citas/agendar_uno.png" width="300px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+        <h5 class="card-title">Paso 2. Ingresar al Formulario de Agendar Cita</h5>
+
+        <p class="card-text">
+            En la sección Mis Citas, presiona el botón <button type="button" class="btn btn-primary">Agendar</button>.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Citas/agendar_dos.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+        <h5 class="card-title">Paso 3. Ingresar Paciente</h5>
+
+        <p class="card-text">
+           Dentro del formulario Agendar Cita llena el campo <b>Paciente</b>, para ello escribe el nombre del Paciente y selecciona una opción de la
+           lista desplegable.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Citas/agendar_tres.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+        <h5 class="card-title">Paso 4. Ingresar Servicio</h5>
+
+        <p class="card-text">
+            En el campo <b>Servicio</b> selecciona una opción de la lista de los servicios que 
+            has agregado.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Citas/agendar_cuatro.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+        <h5 class="card-title">Paso 5. Ingresar Fecha</h5>
+
+        <p class="card-text">
+            En el campo <b>Fecha</b> selecciona el día que será la cita.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Citas/agendar_cinco.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+        <h5 class="card-title">Paso 6. Ingresar Hora</h5>
+
+        <p class="card-text">
+            En el campo <b>Hora</b> escribe o selecciona la hora de la cita.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Citas/agendar_seis.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+        <h5 class="card-title">Paso 7. Agendar Cita</h5>
+
+        <p class="card-text">
+            Presiona
+            el botón <button type="button" class="btn btn-primary">Agendar</button>,
+            si todo salió correctamente aparecerá un mensaje indicando que la Cita se registro de manera correcta.
+        </p>
+
+        <br />
+
+        <div class="row justify-content-center">
+            <div class="col-md-auto">
+                <img class="shadow rounded-2" src="~/img/Documentacion/GuiaUsuario/Citas/agendar_siete.png" width="800px" />
+            </div>
+        </div>
+
+        <br /> <br />
+
+    </div>
+</div>
+    </div>
+</div>

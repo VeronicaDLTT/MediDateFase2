@@ -1,0 +1,177 @@
+﻿@model IEnumerable<MediDate.Models.Cita>
+
+@{
+    ViewData["Title"] = "Historial";
+
+    //Fecha actual
+    var strDia = DateTime.Now.ToString("dddd");
+    var strNumDia = DateTime.Now.ToString("dd");
+    var strMes = DateTime.Now.ToString("MMMM");
+    var strAnio = DateTime.Now.ToString("yyyy");
+
+    var strAlertEstado = "";
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["InfoMessage"] != null)
+{
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["InfoMessage"]', 'info');
+        }
+    </script>
+}
+
+@if (ViewBag.TipoUsuario.Equals("P"))
+{
+    <partial name="_MenuPacientes" />
+}
+else if (ViewBag.TipoUsuario.Equals("M"))
+{
+    <partial name="_MenuMedicos" />
+}
+else if(ViewBag.TipoUsuario.Equals("A")){
+    <partial name="_MenuAdministrador" />
+}
+
+<div class="container">
+
+    <div><label></label></div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-auto align-self-center">
+            <h4>Historial de Citas Médicas</h4>
+        </div>
+    </div>
+
+    <div><label></label></div>
+
+    @if (Model.Count() > 0)
+    {
+        <table class="table table-hover text-center">
+            <thead style="background-color: #712cd9;" class="rounded-1">
+                <tr>
+                    <th class="text-center text-white">
+                        @Html.DisplayName("Doctor")
+                    </th>
+                    <th class="text-center text-white">
+                        @Html.DisplayName("Paciente")
+                    </th>
+                    <th class="text-center text-white">
+                        @Html.DisplayNameFor(model => model.Servicio)
+                    </th>
+                    <th class="text-center text-white">
+                        
+                        @Html.DisplayNameFor(model => model.Fecha)
+                    </th>
+                    <th class="text-center text-white">
+                        @Html.DisplayNameFor(model => model.Hora)
+                    </th>
+                    <th class="text-center text-white">
+                        @Html.DisplayNameFor(model => model.Estado)
+                    </th>
+                    <th class="text-center text-white">Receta</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NombreMedico)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NombrePaciente)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Servicio)
+                        </td>
+                        <td>
+                            @{
+                                var strFecha = item.Fecha.ToString("dd/MM/yyyy");
+                            }
+                            @Html.DisplayFor(modelItem => strFecha)
+                        </td>
+                        <td>
+                            @{
+                                var strHora = item.Hora.ToString("hh:mm tt");
+                            }
+                            @Html.DisplayFor(modelItem => strHora)
+                        </td>
+                        <td>
+                            @switch(item.Estado){
+                                case 1:
+                                    strAlertEstado = "bg-info";
+                                    break;
+                                case 2:
+                                    strAlertEstado = "bg-success";
+                                    break;
+                                case 3:
+                                    strAlertEstado = "bg-warning";
+                                    break;
+                                case 4:
+                                    strAlertEstado = "bg-dark";
+                                    break;
+                                case 5:
+                                    strAlertEstado = "bg-danger";
+                                    break;
+                                default:
+                                    strAlertEstado = "bg-light";
+                                    break;
+                            }
+
+                            <div class=" @strAlertEstado text-white text-center fw-bold p-1 rounded-1">
+                                @Html.DisplayFor(modelItem => item.DescEstado)
+                            </div>
+                            
+                        </td>
+                        <td class="text-truncate" style="max-width: 300px;">
+                            @if (item?.NombreArchivo != null && !item.NombreArchivo.Equals(""))
+                            {
+                                <a href="@Url.Action("VerArchivo", "Usuario", new { IdArchivo = item.IdArchivo })" target="_self" class="nav-link text-black"><i class="fa-solid fa-file-pdf fa-2xl text-purple"></i> <br /> @item.NombreArchivo</a>
+                            }
+                            
+                        </td>
+                        @*  <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td> *@
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Sin Citas</h5>
+                <p class="card-text">No existe un registro de Citas.</p>
+                <i class="fa-solid fa-circle-exclamation fa-2xl" style="color: #712cf9;"></i>
+            </div>
+        </div>
+    }
+    
+</div>
+        </div> @*Fin Col de _Menu.cshtml*@
+    </div> @* Fin Row de _Menu.cshtml*@
+</div> @*Fin Container de _Menu.cshtml*@

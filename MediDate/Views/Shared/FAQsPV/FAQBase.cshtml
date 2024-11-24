@@ -1,0 +1,18 @@
+﻿@{
+
+    var faq = ViewBag.FAQ;
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col">
+            <div class="card-header border-bottom border-primary pb-2 mb-4">
+                <h4 class="card-title text-center fw-normal">@faq.DescripcionFAQ</h4>
+            </div>
+
+            <div class="card-body lh-lg">
+                @Html.Raw(faq.Respuesta)
+            </div>
+        </div>
+    </div>
+</div>

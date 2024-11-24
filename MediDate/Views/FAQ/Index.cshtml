@@ -1,0 +1,250 @@
+﻿<style>
+    .formMediDate{
+        background: linear-gradient(30deg, #d4c3ef, #712cd9);
+    }
+
+    .busqueda {
+        border: 1px solid white; /* Borde blanco */
+        border-radius: 20px 0 0 20px; /* Bordes redondeados en la izquierda */
+        background-color: white; /* Fondo blanco */
+        color: #343a40; /* Color del texto, opcional */
+        padding: 10px; /* Espaciado interno para mejor apariencia */
+        /* width: 100%; */ /* Ocupa todo el ancho disponible */
+    }
+
+    .input-group .btn {
+        border-radius: 0 20px 20px 0; /* Bordes redondeados en la derecha */
+        background-color: white; /* Fondo blanco para el botón */
+        border: 1px solid white; /* Borde blanco para que coincida */
+        color: #712cd9; /* Color del ícono */
+        padding: 10px; /* Agregar algo de espacio */
+    }
+
+    .icon-search {
+        color: #712cd9; /* Color del ícono */
+    }
+
+    .input-group {
+        display: flex; /* Asegúrate de que sea un contenedor flexible */
+    }
+
+    .card:hover{
+        color: #343a40;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+@model IEnumerable<MediDate.Models.FAQ>
+
+@{
+    var categorias = ViewBag.Categorias as IEnumerable<MediDate.Models.Categoria>;
+    //var categoria = new Categoria();
+    var count = 0;
+}
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <!--Modal si la ejecución en la BD sale bien-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["SuccessMessage"]', 'success');
+        }
+    </script>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <!--Modal si ocurre una excepción-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["ErrorMessage"]', 'error');
+        }
+    </script>
+}
+
+@if (TempData["AlertMessage"] != null)
+{
+    <!--Modal si hay que mostrar información relevante al usuario-->
+    <script>
+        window.onload = function () {
+            Swal.fire('Aviso', '@TempData["AlertMessage"]', 'info');
+        }
+    </script>
+}
+
+<partial name="_MenuHome"/>
+
+<div class="row">
+    <div class="col-md-auto border-1 border-end">
+        <div class="row justify-content-between" onclick="seleccionarCategoria(0)">
+            <div class="col-md-auto align-content-center">
+                <a id="0" class="nav-link text-black" href="#">Inicio</a>
+            </div>
+            <div class="col-md-auto align-content-center">
+                <i id="i0" class="fa-solid fa-arrow-right" style="color: #000000;"></i>
+            </div>
+        </div>
+        <hr />
+
+        @foreach (var cat in categorias)
+        {
+            <div class="row justify-content-between" onclick="seleccionarCategoria(@cat.IdCategoria)">
+                <div class="col-md-auto align-content-center">
+                    <a id="@cat.IdCategoria" class="nav-link text-black" href="#">@cat.DescripcionCategoria</a>
+                </div>
+                <div class="col-md-auto align-content-center">
+                    <i id="i @cat.IdCategoria" class="fa-solid fa-arrow-right" style="color: #000000;"></i>
+                </div>
+            </div>
+            <hr />
+            count++;
+        }
+    
+    </div>
+
+    <div class="col">
+        <div id="formContainer">
+            <div class="row justify-content-center m-1 p-2 rounded formMediDate">
+                <div class="col-md-auto">
+                    <form asp-action="Index" method="POST" id="formBusqueda">
+                        <div><label></label></div>
+                        <h3 class="card-title">¿Cómo podemos ayudarte?</h3>
+                        <div><label></label></div>
+    
+                        <input id="intIdCategoria" name="intIdCategoria" type="hidden" class="form-control" value="@ViewBag.IntIdCategoria" />
+
+                        <div class="input-group mb-1"> <!-- Agregar una clase de margen inferior -->
+                            <input id="txtBuscar" name="txtBuscar" type="text" class="busqueda form-control" placeholder="¿Qué estás buscando?" autocomplete="off" />
+                            <button type="submit" class="btn"><i class="fa-solid fa-magnifying-glass icon-search"></i></button>
+                        </div>
+
+                        <div><label></label></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div><label></label></div>
+
+            <div class="row">
+                <div class="col">
+                    <!-- Contenedor de preguntas -->
+                    <div id="preguntasContainer">
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                @foreach (var item in Model)
+                                {
+                                    var categoria = categorias.FirstOrDefault(c => c.IdCategoria == item.IdCategoria);
+
+                                    <div class="card shadow p-1 mb-2 bg-body-tertiary rounded">
+                                        <div class="card-body">
+                                            <small>@categoria.DescripcionCategoria</small>
+                                            <a href="javascript:void(0);" onclick="mostrarRespuesta('@item.Accion','@item.IdFAQ')" class="nav-link text-dark">
+                                                <h5 class="card-title">@item.DescripcionFAQ</h5>
+                                            </a>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+
+                         <!-- Paginación -->
+                        <div class="row justify-content-center">
+                            <div class="col-md-auto">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        @if (ViewBag.CurrentPage > 1)
+                                        {
+                                            <li class="page-item">
+                                                <a class="page-link" href="@Url.Action("Index", new { page = ViewBag.CurrentPage - 1 })" aria-label="Previous">
+                                                    <span aria-hidden="true">&laquo;</span>
+                                                </a>
+                                            </li>
+                                        }
+
+                                        @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                                        {
+                                            <li class="page-item @(i == ViewBag.CurrentPage ? "active" : "")">
+                                                <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
+                                            </li>
+                                        }
+
+                                        @if (ViewBag.CurrentPage < ViewBag.TotalPages)
+                                        {
+                                            <li class="page-item">
+                                                <a class="page-link" href="@Url.Action("Index", new { page = ViewBag.CurrentPage + 1 })" aria-label="Next">
+                                                    <span aria-hidden="true">&raquo;</span>
+                                                </a>
+                                            </li>
+                                        }
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contenedor de Vista Parcial -->
+                    <div id="respuestaContainer" class="row" style="display: none;">
+                        <div class="col-md-12">
+                           @*  <partial name="~/Views/Shared/FAQsPV/CancelarCita.cshtml" id="vistaParcial"/> *@
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+</div>
+
+<div><label></label></div>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        
+        let intIdCat = document.getElementById("intIdCategoria").value;
+        let linkSelected = document.getElementById(intIdCat);
+
+        linkSelected.classList.remove('text-black');
+        linkSelected.classList.add('fw-bold');
+    });
+
+    function seleccionarCategoria(idCategoria) {
+        document.getElementById("intIdCategoria").value = idCategoria;
+        alert("idcat: " + idCategoria + " txt: " + document.getElementById("txtBuscar").value);
+        document.getElementById("formBusqueda").submit();
+    }
+
+    function cargarVistaParcial(accion, idfaq) {
+        // Realizar una solicitud fetch para cargar la vista parcial
+        fetch(`/FAQ/CargarVistaParcial?accion=${accion}&idfaq=${idfaq}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok.');
+                }
+                return response.text(); // Obtener la respuesta como texto
+            })
+            .then(html => {
+                // Reemplazar el contenido del contenedor con el HTML recibido
+                document.getElementById("respuestaContainer").innerHTML = html;
+            })
+            .catch(error => {
+                console.error('Error fetching the partial view:', error);
+            });
+    }
+
+    function mostrarRespuesta(accion,idfaq) {
+
+        cargarVistaParcial(accion,idfaq);
+        // Oculta el contenedor de preguntas y muestra el contenedor de la respuesta
+        document.getElementById("preguntasContainer").style.display = "none";
+        document.getElementById("respuestaContainer").style.display = "block";
+
+    }
+</script>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

@@ -1,0 +1,264 @@
+﻿@using System.Globalization
+@model MediDate.Models.Medico
+
+@{
+    var citas = ViewBag.CitasHD as IEnumerable<MediDate.Models.Cita>;
+    var horariosText = "";
+    var horarios = ViewBag.Horarios as IEnumerable<MediDate.Models.Horario>;
+    var fechaActual = DateTime.Now;
+    var diaSiguiente = fechaActual.Date;
+    var diaSiguienteName = fechaActual.AddDays(1).Date.ToString("dddd"); ;
+    int numDiaSiguiente;
+    var diasMostrar = 5;
+    var diaDescripcionAux = "";
+    var diasCerrados = ViewBag.DiasCerrados as IEnumerable<MediDate.Models.DiaCerrado>;
+
+}
+
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDgOE6qjEqPrtHoiolLPJXfUD9XKvRvY0s" async defer></script>
+<script src="/jquery-3.6.3.min.js"></script>
+<script>
+    function mostrarMapa() {
+        const direccion = '@ViewBag.DireccionCon';
+        const mapaUrl = `https://www.google.com/maps/embed/v1/place?q=${encodeURIComponent(direccion)}&key=AIzaSyDgOE6qjEqPrtHoiolLPJXfUD9XKvRvY0s`;
+        const iframe = $('<iframe></iframe>');
+            iframe.attr('src', mapaUrl);
+            iframe.attr('height', '200');
+            iframe.attr('frameborder', '0');
+            iframe.attr('style', 'border:0; width:100%; margin-top:15px');
+            $('#mapas').append(iframe);
+    }
+
+    window.onload = mostrarMapa;
+</script>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+       
+            <div class="row justify-content-center">
+                @*Información del Medico*@
+                <div class="col-md-12 align-self-center">
+                    <div class="card border-primary">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="~/img/img_medico.png" class="img-fluid rounded-start" alt="Médico">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <h5 class="card-title">@Html.DisplayFor(model => model.NombreCompleto)</h5>
+                                    <p class="card-text">@Html.DisplayFor(model => model.Especialidad)</p>
+                                    <p class="card-text">No. de Cédula: @Html.DisplayFor(model => model.NumCedula)</p>
+                                    <a class="btn btn-primary" asp-controller="Cita" asp-action="CreatePaciente">Agendar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div><label></label></div>
+
+            @*Información del Consultorio*@
+            <div class="row justify-content-start">
+                <div class="col-md-12 align-self-center">
+                    <div class="card border-primary">
+                        <div class="card-header">Información del Consultorio</div>
+                        <div class="card-body">
+                            <h5 class="card-title">@ViewBag.NombreCon</h5>
+                            
+                            <p class="card-text">
+                                <i class="fa-solid fa-location-dot" style="color: #712cf9;"> </i>
+                                <b>Dirección:</b> @ViewBag.DireccionCon
+                            </p>
+
+                            <div id="mapas"></div>
+
+                            <br />
+
+                            <p class="card-text fw-bold">
+                                <i class="fa-regular fa-clock" style="color: #712cf9;"></i>
+                                Horario de Atención
+                            </p>
+                            <table class="table">
+                                <tbody>
+                                    @if (horarios.Count() == 0)
+                                    {
+                                        <tr><td>Horario de atención no disponible</td></tr>
+                                    }
+                                    else
+                                    {
+                                        @for(var i = 0; i<7; i++){
+                                            var horariosCadaDia = horarios.Where(h => h.Dia == i+1).ToList();
+
+                                            <tr>
+                                                <td><b>@horariosCadaDia[0].DiaDescripcion: </b></td>
+                                        
+                                                @foreach(var horario in horariosCadaDia){
+                                                    if(horario.Estado == 1)
+                                                    {
+                                                        <td>Cerrado</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td>@horario.HoraInicio.ToString("HH:mm") - @horario.HoraFin.ToString("HH:mm")</td>
+                                                    }
+                                                
+                                                }
+
+                                            </tr>
+                                        }
+                                        
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+
+        @* Información de los horarios disponibles *@
+        <div class="col-md-7">
+            <div class="card border-primary">
+                @if (horarios.Count() != 0)
+                {
+                    <div class="card-header">Horarios Disponibles (Próximos 5 días)</div>
+                    <div class="card-body">
+                        <div class="row justify-content-center">
+                            @for (int i = 0; i < diasMostrar; i++)
+                            {
+                                <div class="col-md-auto">
+                                    <table class="table text-center">
+                                        <thead>
+                                            <tr>
+                                                @{
+                                                    diaSiguiente = fechaActual.AddDays(i + 1).Date;
+                                                    diaSiguienteName = diaSiguiente.ToString("dddd", CultureInfo.CreateSpecificCulture("es-ES")).ToLower();
+                                                    numDiaSiguiente = ObtenerNumDia(diaSiguienteName);
+
+                                                    <th>
+                                                        @diaSiguienteName
+                                                        <br />
+                                                        @diaSiguiente.ToString("dd MMM yyyy")
+                                                    </th>
+                                                }
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @{
+                                                var horariosDia = horarios.Where(h => h.Dia == numDiaSiguiente).ToList();
+
+                                                //Verificamos si el dia esta marcado como Cerrado
+                                                var estaCerrado = horarios.Any(h => h.Dia == numDiaSiguiente && h.Estado == 1);
+
+                                                //Verificamos si el dia se encuentra en Dias Cerrados
+                                                var diaCerrado = diasCerrados.Any(d =>
+                                                    (d.Fecha2 == null && d.Fecha1.Date == diaSiguiente) ||
+                                                    (d.Fecha2 != null && diaSiguiente >= d.Fecha1.Date && diaSiguiente <= d.Fecha2.Value.Date)
+                                                );
+
+                                                if (estaCerrado)
+                                                {
+                                                    <tr>
+                                                        <td>Cerrado</td>
+                                                    </tr>
+                                                }else if (diaCerrado)
+                                                {
+                                                    <tr>
+                                                        <td>Cerrado</td>
+                                                    </tr>
+                                                }
+                                                else
+                                                {
+                                                    foreach (var horario in horariosDia)
+                                                    {
+                                                        var horaInicio = DateTime.Parse(horario.HoraInicio.ToString()).TimeOfDay;
+                                                        var horaFin = DateTime.Parse(horario.HoraFin.ToString()).TimeOfDay;
+
+                                                        for (var hora = horaInicio; hora < horaFin; hora = hora.Add(TimeSpan.FromHours(1)))
+                                                        {
+                                                            var horaCita = diaSiguiente.Date + hora;
+
+                                                            // Verificamos si la hora está ocupada
+                                                            var estaOcupada = citas.Any(c => c.Fecha == diaSiguiente && c.Hora.ToString("HH:mm") == horaCita.ToString("HH:mm"));
+
+                                                            <tr>
+                                                                <td>
+                                                                    @if (estaOcupada)
+                                                                    {
+                                                                        <span class="text-danger">Ocupado</span>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <a href="@Url.Action("CreatePaciente", "Cita", new { Fecha = diaSiguiente.ToString("yyyy-MM-dd"), Hora = horaCita.ToString("HH\\:mm") })" class="btn btn-success">
+                                                                            @horaCita.ToString("HH\\:mm")
+                                                                        </a>
+                                                                    }
+                                                                </td>
+                                                            </tr>
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="card-body">
+                        <i class="fa-solid fa-clock" style="color: #712cf9;"> </i>
+                        <label>Horario de Atención no disponible.</label>
+                    </div>
+                    
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@{
+    int ObtenerNumDia(string nombreDia)
+    {
+        int numDia = 0;
+
+        switch (nombreDia)
+        {
+            case "lunes":
+            case "monday":
+                numDia = 1;
+                break;
+            case "martes":
+            case "tuesday":
+                numDia = 2;
+                break;
+            case "miércoles":
+            case "wednesday":
+                numDia = 3;
+                break;
+            case "jueves":
+            case "thursday":
+                numDia= 4;
+                break;
+            case "viernes":
+            case "friday":
+                numDia = 5;
+                break;
+            case "sábado":
+            case "saturday":
+                numDia = 6;
+                break;
+            case "domingo":
+            case "sunday":
+                numDia = 7;
+                break;
+        }
+
+        return numDia;
+    }
+}
